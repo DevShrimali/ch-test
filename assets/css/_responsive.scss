@@ -7,15 +7,137 @@
     .navbar {
         display: block;
     }
-  
+
     .bookPromo-inner .row1 {
         flex-wrap: nowrap;
         display: flex;
         overflow: auto;
     }
+
     .mobile-hide {
         display: none;
-      }
+    }
+
+    .overview-container {
+        margin: 0 10px !important;
+    }
+
+    .overview-wrapper {
+        border: none !important;
+        font-size: 14px;
+        border-bottom: 0.5px solid #ccc !important;
+    }
+
+    .presentation {
+        border-bottom: 0.5px solid #ccc !important;
+    }
+
+    .rhf-desktop-hide {
+        display: block;
+    }
+
+    .pdp-header-info {
+        text-align: center;
+    }
+
+    .rating.pt-2 {
+        justify-content: center;
+    }
+
+    // Footer 
+
+    .footer-list {
+        border-bottom: #dee2e6 1px solid;
+        margin-bottom: 20px;
+    }
+
+    .footer-list .col {
+
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+        margin-bottom: 15px;
+    }
+
+    .footer-wrap .f-head {
+        font-size: 16px;
+        padding-bottom: 5px;
+        position: relative;
+
+    }
+
+    .footer-wrap .f-head:after {
+
+        content: '\f107';
+        font-family: 'FontAwesome';
+        font-size: 20px;
+        color: #969da2;
+        position: absolute;
+        top: -3px;
+        right: 0;
+    }
+
+    .footer-wrap .f-head.arrow:after {
+        transform: rotate(180deg);
+
+    }
+
+    .footer-wrap .list-unstyled {
+        display: none;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-wrap .list-unstyled li {
+        width: 49%;
+        display: inline-block;
+    }
+
+    .footer-wrap .list-unstyled li a {
+        font-size: 15px;
+    }
+
+    .footer-wrap .list-unstyled.show {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .f-head {
+        font-size: 16px;
+    }
+
+    .f-head1,
+    .f-head2,
+    .ft-promo-link a {
+        font-size: 14px;
+    }
+
+    .fsocial {
+        justify-content: center;
+    }
+
+    .footerList-nav {
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 15px;
+    }
+
+    .footerList-nav li {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+
+    .footerList-nav li a {
+        font-size: 14px !important;
+    }
+
+    /* wishlist */
+    .wishlist-select {
+        width: 100%;
+        margin: 1rem 0.5rem;
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -204,3 +326,6 @@
     padding: 10px 15px;
     margin-top: 10px;
 }
+
+
+// Check later for tags
