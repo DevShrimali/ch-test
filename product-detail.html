@@ -2,1059 +2,838 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>ChapterOne - Book Store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ChapterOne - Online Book Store | Buy Largest Collection Books </title>
 
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/slick-theme.css">
-  <link rel="stylesheet" href="assets/css/slick.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.svg">
-
-
-  <style type="text/css" media="screen">
-  </style>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.svg">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <section class="fullnav">
-    <div class="header-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2 d-none d-md-block"></div>
-          <div class="col-12 col-md-8 mt-2">
-            <div id="carouselHeader" class="carousel slide headerCarousel" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">Free Shipping on Orders of $35 or More</div>
-                <div class="carousel-item">Bingeworthy eBooks Under $5</div>
-                <div class="carousel-item">Free Shipping on Orders of $35 or More</div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="col-2 col-md-2 text-end mt-2 alloffer-main">
-            <!-- <a>
-              <span class="mobile-hide all-offer">See All offers</span>
-              <img class="d-lg-none" src="assets/images/icons-mic/downarrow.png">
-            </a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="navbar navbar-expand-lg navbar-light subHeader">
-        <div class="utility-bar">
-          <div class="d-none d-lg-block">
-
-          </div>
-          <div class="right-sidebar d-none d-lg-block">
-            <ul class="navbar-nav bs-navbar-nav">
-              <li class="nav-item dropdown mobile-hide">
-                <a class="bs-nav-link nav-link">
-                  <div class="d-flex justify">
-                    <!-- dropdown code -->
-                    <div class="dropdown">
-                      <img class="personCircle" src="assets/images/icons-mic/person-circle.svg" /><span class="pe-4"
-                        id="MyAccountDropdown" data-bs-toggle="dropdown" aria-expanded="false">my account</span> <img
-                        class="down-arrow1" src="assets/images/icons-mic/down-caret.svg" />
-                      <div class="dropdown-menu my_account_dropdown" aria-labelledby="MyAccountDropdown">
-                        <div class="text-center btn_wrapper">
-                          <a type="button " class="btn btn-success sign_in_btn" data-bs-toggle="modal"
-                            data-bs-target="#signInModal">Sign In</a>
-                          <a class="link" data-bs-toggle="modal" data-bs-target="#registerModal">Create an
-                            account</a>
+    <!-- @HEADER ======================================================================================================================= -->
+    <!-- Pre-navbar -->
+    <div class="pre-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto mt-2">
+                    <div id="carouselHeader" class="carousel slide pre-navCarousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><a href="">Free Shipping on Orders of $35 or More</a>
+                            </div>
+                            <div class="carousel-item"><a href="">Blameworthy eBooks Under $5</a></div>
+                            <div class="carousel-item"><a href="">Free Shipping on Orders of $35 or More</a></div>
                         </div>
-                        <ul class="list-unstyled pt-3">
-                          <li>Manage Account</li>
-                          <li>Order Status</li>
-                          <li>My NOOK</li>
-                          <li>Address Book</li>
-                          <li>Payment Methods</li>
-                        </ul>
-                      </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <!-- dropdown code -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Sign in  -->
-                    <div class="modal fade signIn" id="signInModal" tabindex="-1" aria-labelledby="ModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content rounded-0 p-2">
-                          <div class="modal-header border-0">
-                            <h3 class="modal-title mt-3" id="ModalLabel">Sign in or Create an Account</h3>
-                            <button type="button" class="btn-close pb-3 pe-2" data-bs-dismiss="modal"
-                              aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="form-floating mb-3">
-                              <input type="email" class="form-control rounded-0" id="floatingInput"
-                                placeholder="name@example.com" />
-                              <label for="floatingInput">Email address</label>
-                            </div>
-                            <div class="form-floating">
-                              <input type="password" class="form-control rounded-0" id="floatingPassword"
-                                placeholder="Password" />
-                              <label for="floatingPassword">Password</label>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between my-3">
-                              <div class="form-check">
-                                <input class="form-check-input rounded-0" type="checkbox" value=""
-                                  id="flexCheckDefault" />
-                                <label class="form-check-label remember_me_text" for="flexCheckDefault">
-                                  Remember me</label>
-                              </div>
-                              <p>
-                                <a class="link" href="#" id="loginForgotPassword" tabindex="5">Forgot your password?</a>
-                              </p>
-                            </div>
-                            <div class="d-grid gap-2 mx-auto">
-                              <button class="form_btn btn btn-success rounded-0 secure_sign_in" type="button">
-                                Sign In
-                              </button>
-                              <button class="form_btn btn btn-outline-dark rounded-0" type="button"
-                                data-bs-toggle="modal" data-bs-target="#registerModal">
-                                Create an Account
-                              </button>
-                            </div>
-                            <!-- facebook google button icon -->
-                            <div class=" mx-auto my-4 d-flex justify-content-between">
-                              <button
-                                class="form_btn btn btn-success rounded-0 secure_sign_in col-md-6 border-0 secure_sign_in-icon-google"
-                                type="button">
-                                <i class="fa fa-google me-2" aria-hidden="true" style="color: #fff;"></i>
-                                Google
-                              </button>
+    <div class="container">
+        <!-- Account -->
+        <div class="navbar navbar-expand-lg navbar-light">
+            <div class="account-options">
+                <div class="d-none d-lg-block">
+                </div>
+                <div class="right-sidebar d-none d-lg-block">
+                    <ul class="navbar-nav bs-navbar-nav">
+                        <li class="nav-item dropdown mobile-hide pe-2">
+                            <a class="bs-nav-link nav-link">
+                                <div class="d-flex justify">
+                                    <!-- dropdown code -->
+                                    <div class="dropdown">
+                                        <i class="fa-regular fa-circle-user fs-6 personCircle me-2"></i>
+                                        <span class="pe-2" id="MyAccountDropdown" data-co-toggle="dropdown"
+                                            aria-expanded="false"> My account</span>
+                                        <i class="fa fa-chevron-down down-arrow1"></i>
+                                        <div class="dropdown-menu my_account_dropdown"
+                                            aria-labelledby="MyAccountDropdown">
+                                            <div class="text-center btn_wrapper">
+                                                <a type="button " class="btn btn-success sign_in_btn"
+                                                    data-co-toggle="modal" data-co-target="#signInModal">Sign In</a>
+                                                <a class="link" data-co-toggle="modal"
+                                                    data-co-target="#registerModal">Create an
+                                                    account</a>
+                                            </div>
+                                            <ul class="list-unstyled pt-3">
+                                                <li>Manage Account</li>
+                                                <li>Order Status</li>
+                                                <li>My NOOK</li>
+                                                <li>Address Book</li>
+                                                <li>Payment Methods</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- dropdown code -->
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown mobile-hide pt-1">
+                            <a class="bs-nav-link nav-link" href="wishlist.html"><img class="me-2"
+                                    src="assets/images/icons-mic/wish-list.svg" />wishlist</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Brand, Search & Cart -->
+        <div class="bs-logo-bar my-2 d-flex justify-content-lg-between align-items-center">
+            <span class="btn-sidebar d-lg-none" onclick="openNav()">&#9776;</span>
+            <div class="logo_main">
+                <a href="index.html" title=" Books">
+                    ChapterOne Books
+                </a>
+            </div>
 
-                              <button
-                                class="form_btn btn btn-success rounded-0 secure_sign_in secure_sign_in-icon-facebook border-0 rounded-0 col-md-6 ms-1"
-                                type="button" data-bs-toggle="modal" data-bs-target="#registerModal">
-                                <i class="fa fa-facebook me-2" aria-hidden="true" style="color: #fff;"></i>
-                                Facebook
-                              </button>
+            <div class="input-group search-input py-1 px-5 dropdown">
+                <div class="input-group">
+                    <div class="select-style">
+                        <select name="order" class="form-select rounded-0">
+                            <option class="topshow">All</option>
+                            <option value="a">Book</option>
+                            <option value="b">Notice</option>
+                            <option value="c">Horror</option>
+                            <option value="d">Cider</option>
+                            <option value="e">Mead</option>
+                            <option value="f">Others</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control rounded-0" aria-label="Text input with dropdown button"
+                        placeholder="Search by Title,Author,Keyword or ISBN" id="searchip" onkeyup="searchFunction()" />
+                    <button class="btn searchbtn rounded-0 btn-outline-secondary" type="button"
+                        id="inputGroupFileAddon04">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <ul class="results rounded-0" id="tool">
+                        <li><a href="index.html">Amy Wine house:Beyond Black </a></li>
+                        <li><a href="index.html">Will </a></li>
+                        <li><a href="index.html">This Bright Future: A </a></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li><a href="index.html">Hip-Hop</a></li>
+                        <li><a href="index.html">The Rolling Stones: Unzipped</a></li>
+                        <li><a href="index.html">The Lyrics: 1956 to th</a></li>
+                        <li><a href="index.html">Carpenters: The Music</a></li>
+                        <li><a href="index.html">Music Is History </a></li>
+                        <li><a href="index.html">Search Result #2</a></li>
+                        <li><a href="index.html">Search Result #3</a></li>
+                        <li><a href="index.html">Search Result #1</a></li>
+                        <li><a href="index.html">Search Result #2</a></li>
+                        <li><a href="index.html">Search Result #3</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <a class="bs-nav-link nav-link d-lg-none wishlistArea rhf-desktop-hide">
+                <i class="fa-regular fa-heart fs-6 me-2 me-2"></i> <span>wishlist</span>
+            </a>
+            <div class="cart-icon2" id="hover_btn">
+                <img id="hover_btn" src="assets/images/icons-mic/cart.svg" alt="">
+                <span class="product-count">0</span>
+            </div>
+            <!-- work here -->
+
+            <a class="bs-nav-link nav-link rhf-desktop-hide events" data-bs-toggle="modal" data-bs-target="#Modal">
+                <span><img class="" src="assets/images/icons-mic/person-circle.svg"></span>
+                <span id="MyAccountDropdown" data-bs-toggle="dropdown" aria-expanded="false"></span>
+            </a>
+
+        </div>
+        <!-- Navbar Links -->
+        <div class="navbar navbar-expand-lg navbar-light booksNav d-none d-lg-flex">
+            <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light mobile-hide cat-links">
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">All Books</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Fiction</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Notification</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Kids</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li><span
+                    class="linkline">|</span>
+                <!-- <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li><span class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li><span class="linkline">|</span> -->
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Romance</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Other</a></li><span
+                    class="linkline">|</span>
+            </ul>
+        </div>
+        <!-- Mobile SliderNav -->
+        <div id="mySidenav" class="sidenav">
+            <div class="sidebar-header">
+                <h4>Menu</h4>
+                <a href="javascript:;" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light booksNav">
+
+                <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light ">
+                    <li class="nav-item dropdown mobile-account">
+                        <a class="bs-nav-link nav-link linkText" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-circle-user fs-6 personCircle me-2"></i>
+                            <span class="pe-2" id="MyAccountDropdown" data-co-toggle="dropdown" aria-expanded="false">
+                                My account</span>
+                        </a>
+
+                        <div class="dropdown-menu my_account_dropdown bs-menu container"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <div class="text-center btn_wrapper">
+                                <a type="button " class="btn btn-success sign_in_btn" data-co-toggle="modal"
+                                    data-co-target="#signInModal">Sign In</a>
+                                <a class="link" data-co-toggle="modal" data-co-target="#registerModal">Create an
+                                    account</a>
                             </div>
-                            <!--  facebook google button icon  end -->
-                            <p class="mt-4 text-center footer-text">
-                              By signing in you are agreeing to our <a href="#" class="link-success">Terms of Use</a>
-                              and
-                              our <a href="#" class="link-success">Privacy&nbsp;Policy</a>
-                            </p>
-                          </div>
+                            <div class="row">
+                                <ul class="list-unstyled pt-3">
+                                    <li>Manage Account</li>
+                                    <li>Order Status</li>
+                                    <li>My NOOK</li>
+                                    <li>Address Book</li>
+                                    <li>Payment Methods</li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
+                    </li>
+
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">All</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Notification</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Kids</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <section>
+        <img class="img-fluid banner1" src="assets/images/banner-slider/Ad_Banner.jpg" />
+    </section>
+
+
+    <!-- nav end -->
+
+    <!-- @@@@@@@@@@@@ -->
+
+    <section class="Product_detail">
+        <nav class="breadcrumb p-3" style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active small">Home</li>
+                <li class="breadcrumb-item active small" aria-current="page">Product</li>
+            </ol>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 col-12 ">
+                    <div class="row flex-col-reverse">
+
+                        <div class="col-lg-9 col-md-12 col-sm-12 col-12 product-img-container ">
+                            <div class="product-img-wrapper">
+                                <img class="product-img" src="assets/images/books/03.jpg" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable mx-auto">
+                                        <div class="modal-content">
+
+                                            <div class="modal-body">
+                                                <div class="d-flex justify-content-end mb-3">
+
+                                                    <i class="bi bi-x close-icon me-2 fs-3 text-success border-1"
+                                                        data-bs-dismiss="modal" aria-label="Close"></i>
+                                                    </i>
+                                                </div>
+
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="modal-img" src="assets/images/books/03.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                    <div class="pdp-header-info">
+                        <p class="pdp-header-title ">Kingdom of the Cursed (ChapterOne Exclusive Edition)</p>
+                        <span id="key-contributors"> by <a class="link pdp-book-author" href="#">Kerri Maniscalco</a>
+                        </span>
+                        <div class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="ms-4">(0)</span>
+                        </div>
+                    </div>
+
+                    <div class="price-current-old-details">
+                        <span id="pdp-cur-price" class="price current-price ml-0"><sup>$</sup>14.99</span>
+                        <s class="old-price">$18.99</s>
+                        <span class="saved-percent">Save 21%</span>
+                    </div>
+                    <a class="link mt-3 view-all">View All Available Formats & Editions</a>
+
+
+                    <div class="d-grid gap-2 d-md-block">
+                        <button class="btn cart-btn btn-primary rounded-0 px-5 me-2" type="button">ADD TO CART</button>
+
+                        <button class="btn  rounded-0" type="button"> <i class="bi bi-heart heart-icon"></i>
+                            <a class="link">Add to Wishlist</a></button>
+                    </div>
+
+                    <div class="shipping-message ">
+                        <i class="bi bi-truck fs-5 me-2"></i>
+                        <span class="small">Choose Expedited Shipping at checkout for delivery by</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-container  mt-5">
+                <p class="presentation ">Overview</p>
+                <div class="overview-wrapper">
+                    <div class="d-flex">
+                        <div class=" m-3">
+                            <p>In this stunning sequel to <i>Kingdom of the Wicked</i>, Emilia journeys to the Seven
+                                Circles
+                                on her quest to avenge the death of her sister, Vittoria. Luxe world-building, dark
+                                magic,
+                                and twists and turns on every page make this follow-up just as enthralling as its
+                                predecessor.</p>
+                            <b>This Barnes &amp; Noble Exclusive Edition features an alternate jacket, and contains a
+                                scene
+                                told from Wrath’s point of view.</b>
+                            <b>From&nbsp;<i>New York Times&nbsp;</i>bestselling author of&nbsp;<i>Stalking Jack the
+                                    Ripper&nbsp;</i>Kerri Maniscalco comes the sizzling, sweepingly romantic sequel to
+                                <i>Kingdom of the Wicked</i>!<br><br>One sister.<br>Two sinful princes.<br>Infinite
+                                deception with a side of revenge…Welcome to Hell.</b>
+                            <br><br>After selling her soul to
+                            become Queen of the Wicked, Emilia travels to the Seven Circles with
+
+                            <div class="d-flex justify-content-center mt-5 rhf-desktop-hide">
+                                <a class="link read-full-text text-center">Read Full Overview <i
+                                        class="bi bi-chevron-down ms-2 "></i></a>
+
+                            </div>
+                        </div>
+                        <div class="m-3 mobile-hide">
+                            <p class="mobile-hide"> the enigmatic Prince of
+                                Wrath, where she's introduced to a seductive world of vice.<br><br>She vows to do
+                                whatever
+                                it takes to avenge her beloved sister, Vittoria...even if that means accepting the hand
+                                of
+                                the Prince of Pride, the king of demons.<br><br>The first rule in the court of the
+                                Wicked?
+                                Trust no one. With back-stabbing princes, luxurious palaces, mysterious party
+                                invitations,
+                                and conflicting clues about who&nbsp;<i>really</i>&nbsp;killed her twin, Emilia finds
+                                herself more alone than ever before. Can she even trust Wrath, her one-time ally in the
+                                mortal world...or is he keeping dangerous secrets about his true
+                                nature?&nbsp;<br><br>Emilia
+                                will be tested in every way as she seeks a series of magical objects that will unlock
+                                the
+                                clues of her past and the answers she craves...</p>
+                            <div class="d-flex justify-content-center mt-5">
+                                <a class="link read-full-text text-center">Read Full Overview <i
+                                        class="bi bi-chevron-down ms-2 "></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+      
+
+    </section>
+      <!-- @Product CARDS SLIDER ======================================================================================================================= -->
+      <section>
+        <div class="trending container">
+            <!-- Product Category Title -->
+            <div class="mb-4">
+                <h2 class="fst-italic">Now Trending</h2>
+            </div>
+            <!-- Product Cards-->
+            <div class="mx-md-5 pb-4 pb-md-5 mb-3 icon-slider-all">
+                <div class="slick-slider-kids">
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/01.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
                     </div>
                     <!--  -->
-                    <!-- Register -->
-                    <div class="modal fade register" id="registerModal" tabindex="-1" aria-labelledby="ModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content rounded-0 p-2">
-                          <div class="modal-header border-0">
-                            <h3 class="modal-title mt-3 title" id="ModalLabel">Create an Account</h3>
-                            <button type="button" class="btn-close pb-3 pe-2" data-bs-dismiss="modal"
-                              aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body pt-0">
-                            <p class="header">Fill in the fields below to create a Barnes &amp; Noble.com account. <br>
-                              If you already have an account, please
-                              <a href="#" class='link' id="loginModalLink" data-bs-toggle="modal"
-                                data-bs-target="#signInModal">Sign In</a>
-                            </p>
-                            <div class="form-floating mb-3">
-                              <div class="image-upload text-center">
-                                <label for="file-input">
-                                  <img class="upload-profile" src="assets/images/icons-mic/upload.svg" width="110px"
-                                    height="auto" />
-                                </label>
-
-                                <input id="file-input" type="file" name="img" accept="image/*" />
-                              </div>
-
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock</h2>
                             </div>
-
-
-                            <div class="form-floating mb-3">
-
+                            <img src="assets/images/books/02.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
                             </div>
-                            <div class="form-floating mb-3">
-                              <input type="text" class="form-control rounded-0" id="floatingInput"
-                                placeholder="First Name">
-                              <label for="floatingInput">First Name</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                              <input type="text" class="form-control rounded-0" id="floatingInput"
-                                placeholder="Last Name">
-                              <label for="floatingInput">Last Name</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                              <input type="email" class="form-control rounded-0" id="floatingInput"
-                                placeholder="name@example.com">
-                              <label for="floatingInput">Email</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                              <input type="password" class="form-control rounded-0" id="floatingPassword"
-                                placeholder="Password">
-                              <label for="floatingInput">Password</label>
-                            </div>
-
-                            <div class="row my-3 d-flex align-items-center ">
-                              <div class="col">
-                                <button class="form_btn btn btn-success rounded-0 w-100 creat_accont_btn"
-                                  type="button">Create Account</button>
-                              </div>
-                            </div>
-
-                            <!-- facebook google button icon -->
-                            <div class=" mx-auto my-4 d-flex justify-content-between ">
-                              <button
-                                class="form_btn btn btn-success rounded-0 secure_sign_in-icon-google secure_sign_in col-md-6 "
-                                type="button">
-                                <i class="fa fa-google me-2" aria-hidden="true" style="color: #fff;"></i>
-                                Google</button>
-
-                              <button
-                                class="form_btn btn btn-success rounded-0 secure_sign_in secure_sign_in-icon-facebook rounded-0 col-md-6 ms-1"
-                                type="button" data-bs-toggle="modal" data-bs-target="#registerModal">
-                                <i class="fa fa-facebook me-2" aria-hidden="true" style="color: #fff;"></i> Facebook
-                              </button>
-                            </div>
-                            <!--  facebook google button icon  end -->
-                            <div class="border-top mt-4">
-                              <p class="mt-3 px-5 modal_footer">By signing in or creating an account you are agreeing to
-                                our <a class="link" href="#">Terms of Use</a> and our <a href="#" class="link">Privacy
-                                  Policy</a></p>
-                            </div>
-                          </div>
                         </div>
-                      </div>
+                        <div class=" me-3">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
                     </div>
-                    <!-- register modal -->
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item dropdown mobile-hide">
-                <a class="bs-nav-link nav-link" href="wishlist.html"><img class="me-2"
-                    src="assets/images/icons-mic/wish-list.svg" />wishlist</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="bs-logo-bar my-2 d-flex justify-content-lg-between align-items-center">
-        <span class="btn-sidebar d-lg-none" onclick="openNav()">&#9776;</span>
-        <div class="c-page-header__logo">
-          <a href="index.html" class="logo_main" title=" Books" >
-            ChapterOne Books
-           </a>
-        </div>
-        
-        
-
-        <div class="input-group search-input py-1 px-5 dropdown">
-
-          <input type="text" class="form-control rounded-0" aria-label="Text input with dropdown button"
-            placeholder="Search by Title,Author,Keyword or ISBN" />
-          <button class="btn searchbtn rounded-0 btn-outline-secondary" type="button" id="inputGroupFileAddon04">
-            <img src="assets/images/icons-mic/searchicon.svg" />
-          </button>
-        </div>
-
-        <a class="bs-nav-link nav-link d-lg-none wishlistArea"><img class="me-2"
-            src="assets/images/icons-mic/wish-list.svg"> <span>wishlist</span></a>
-
-        <div class="cart-icon2">
-          <i id="hover_btn" class=" bi bi-cart3 fs-2"></i>
-          <span class="product-count">1</span>
-        </div>
-        <!-- work here -->
-
-        <a class="bs-nav-link nav-link rhf-desktop-hide events" data-bs-toggle="modal" data-bs-target="#Modal">
-          <span><img class="" src="assets/images/icons-mic/person-circle.svg"></span>
-          <span id="MyAccountDropdown" data-bs-toggle="dropdown" aria-expanded="false"></span>
-        </a>
-
-      </div>
-      <!-- Mobile Signin -->
-      <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content rounded-0 p-2">
-            <div class="modal-header border-0">
-              <h3 class="modal-title mt-3" id="ModalLabel">Sign in or Create an Account</h3>
-              <button type="button" class="btn-close pb-3 pe-2" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com" />
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating">
-                <input type="password" class="form-control rounded-0" id="floatingPassword" placeholder="Password" />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div class="d-flex flex-row justify-content-between my-3">
-                <div class="form-check">
-                  <input class="form-check-input rounded-0" type="checkbox" value="" id="flexCheckDefault" />
-                  <label class="form-check-label remember_me_text" for="flexCheckDefault">
-                    Remember me</label>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/03.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/04.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3 ">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3 ">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/6.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3 ">
+                            <h6 class="mt-2"><span class="author-dec">Realm Breaker</span></h6>
+                            <p class="auth-name"><u>Victoria</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/7.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class="me-3">
+                            <h6 class="mt-2"><span class="author-dec">Blood And Honey</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
                 </div>
-                <p>
-                  <a class="link" href="#" id="loginForgotPassword" tabindex="5">Forgot your password?</a>
-                </p>
-              </div>
-              <div class="d-grid gap-2 mx-auto">
-                <button class="form_btn btn btn-success rounded-0 secure_sign_in" type="button">
-                  Sign In
-                </button>
-                <button class="form_btn btn btn-outline-dark rounded-0" type="button" data-bs-toggle="modal"
-                  data-bs-target="#Modal2">
-                  Create an Account
-                </button>
-              </div>
-              <!-- facebook google button icon -->
-              <div class=" mx-auto my-4 d-flex justify-content-between">
-                <button
-                  class="form_btn btn btn-success rounded-0 secure_sign_in col-md-6 border-0 secure_sign_in-icon-google"
-                  type="button">
-                  <i class="fa fa-google me-2" aria-hidden="true" style="color: #fff;"></i>
-                  Google
-                </button>
-
-                <button
-                  class="form_btn btn btn-success rounded-0 secure_sign_in secure_sign_in-icon-facebook border-0 rounded-0 col-md-6 ms-1"
-                  type="button" data-bs-toggle="modal" data-bs-target="#Modal2">
-                  <i class="fa fa-facebook me-2" aria-hidden="true" style="color: #fff;"></i>
-                  Facebook
-                </button>
-              </div>
-              <!--  facebook google button icon  end -->
-              <p class="mt-4 text-center footer-text">
-                By signing in you are agreeing to our <a href="#" class="link-success">Terms of Use</a>
-                and
-                our <a href="#" class="link-success">Privacy&nbsp;Policy</a>
-              </p>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- Mobile Register -->
-      <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content rounded-0 p-2">
-            <div class="modal-header border-0">
-              <h3 class="modal-title mt-3 title" id="ModalLabel">Create an Account</h3>
-              <button type="button" class="btn-close pb-3 pe-2" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body pt-0">
-              <p class="header">Fill in the fields below to create a Barnes &amp; Noble.com account. <br>
-                If you already have an account, please
-                <a href="#" class='link' id="loginModalLink" data-bs-toggle="modal" data-bs-target="#Modal">Sign In</a>
-              </p>
-              <div class="form-floating mb-3">
-                <div class="image-upload text-center">
-                  <label for="file-input">
-                    <img class="upload-profile" src="assets/images/icons-mic/upload.svg" width="110px" height="auto" />
-                  </label>
+    </section>
 
-                  <input id="file-input" type="file" name="img" accept="image/*" />
+    <!-- @@@@@@@@@@@@ -->
+
+
+
+    <!-- Footer ============================================================================================= -->
+
+    <section class="ft-normal mb-3 mx-4 mt-4 ">
+
+        <div class="container mx-auto">
+            <!-- footer block -->
+            <div class="row border-top footer-box">
+
+                <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa fa-truck" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">Free Delivery Across India <br> Available With Every Order</p>
+                    <!-- <p class="f-head2 mb-2">5% Back on All ChapterOne&nbsp;Purchases</p> -->
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
                 </div>
+                <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa-book" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">Over 1 Lakh Books <br> Available Online</p>
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+                <div class=" border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa-star" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">100% Safe And <br> Secure Payments</p>
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+            </div>
 
-              </div>
-
-
-              <div class="form-floating mb-3">
-
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="First Name">
-                <label for="floatingInput">First Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="Last Name">
-                <label for="floatingInput">Last Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-0" id="floatingPassword" placeholder="Password">
-                <label for="floatingInput">Password</label>
-              </div>
-
-              <div class="row my-3 d-flex align-items-center ">
+            <!--footer block end  -->
+            <div class="my-4 my-md-5 row">
                 <div class="col">
-                  <button class="form_btn btn btn-success rounded-0 w-100 creat_accont_btn" type="button">Create
-                    Account</button>
-                </div>
-              </div>
+                    <div class="row footer-list">
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">ChapterOne Services</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="refund-and-return-policy.html">Refund and
+                                        Return
+                                        Policies</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Privacy Policy</a></li>
+                                <li class="ft-promo-link"><a class="" href="term-of-use.html">Terms Of use</a></li>
 
-              <!-- facebook google button icon -->
-              <div class=" mx-auto my-4 d-flex justify-content-between ">
-                <button class="form_btn btn btn-success rounded-0 secure_sign_in-icon-google secure_sign_in col-md-6 "
-                  type="button">
-                  <i class="fa fa-google me-2" aria-hidden="true" style="color: #fff;"></i>
-                  Google</button>
-
-                <button
-                  class="form_btn btn btn-success rounded-0 secure_sign_in secure_sign_in-icon-facebook rounded-0 col-md-6 ms-1"
-                  type="button" data-bs-toggle="modal" data-bs-target="#registerModal">
-                  <i class="fa fa-facebook me-2" aria-hidden="true" style="color: #fff;"></i> Facebook
-                </button>
-              </div>
-              <!--  facebook google button icon  end -->
-              <div class="border-top mt-4">
-                <p class="mt-3 px-5 modal_footer">By signing in or creating an account you are agreeing to
-                  our <a class="link" href="#">Terms of Use</a> and our <a href="#" class="link">Privacy
-                    Policy</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- @ -->
-      <div class="navbar navbar-expand-lg navbar-light booksNav d-none d-lg-flex">
-        <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light mobile-hide">
-          <li style="margin-left: -10px;" class="nav-item dropdown">
-            <a class="bs-nav-link nav-link linkText" href="category-list.html">All Books</a>
-
-          </li>
-          <li class="nav-item dropdown">
-            <a class="bs-nav-link nav-link linkText">Fiction</a>
-          </li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Notification</a></li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Kids</a></li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li>
-          <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li>
-        </ul>
-      </div>
-
-      <div id="mySidenav" class="sidenav">
-        <div class="sidebar-header">
-          <h4>Menu</h4>
-          <a href="javascript:;" class="closebtn" onclick="closeNav()">&times;</a>
-        </div>
-        <div class="navbar navbar-expand-lg navbar-light booksNav">
-          <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light ">
-            <li class="nav-item dropdown">
-              <a class="bs-nav-link nav-link linkText" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">All Books</a>
-              <div class="dropdown-menu bs-menu container" aria-labelledby="navbarDropdownMenuLink">
-                <div class="row">
-
-                  <div class="row">
-                    <div class="col-md-3">
-
-                      <ul class="list-unstyled mt-2">
-                        <li>Ny Best Sellers</li>
-                        <li>Best sellers</li>
-                        <li>New Release</li>
-                      </ul>
-                      <div class="p-1 mb-1 fw-bold menu-head mt-3"><span>Customer Favorites</span></div>
-                      <ul class="list-unstyled mt-2">
-                        <li>Coming soon</li>
-                        <li>Signed books</li>
-                        <li>All best sellers</li>
-                        <li>Book 4</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="p-1 mb-1 fw-bold menu-head mt-3"><span>Top subject</span></div>
-                      <ul class="list-unstyled mt-2">
-                        <li>ChapterOne Book of the year</li>
-                        <li>ChapterOne Signed books</li>
-                        <li>ChapterOne All best sellers</li>
-                        <li>ChapterOne Book 4</li>
-                        <li>ChapterOne Signed books</li>
-                        <li>ChapterOne All best sellers</li>
-                        <li>Coming soon</li>
-                        <li>Signed books</li>
-                        <li>All best sellers</li>
-                        <li>Book 4</li>
-                        <li>Ny Best Sellers</li>
-                        <li>Best sellers</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="p-1 mb-1 fw-bold menu-head mt-3"><span>Top subject</span></div>
-                      <ul class="list-unstyled mt-2">
-                        <li>ChapterOne Book of the year</li>
-                        <li>ChapterOne Signed books</li>
-                        <li>ChapterOne All best sellers</li>
-                        <li>ChapterOne Book 4</li>
-                        <li>ChapterOne Signed books</li>
-                        <li>ChapterOne All best sellers</li>
-                        <li>Coming soon</li>
-                        <li>Signed books</li>
-                        <li>All best sellers</li>
-                        <li>Book 4</li>
-                        <li>Ny Best Sellers</li>
-                        <li>Best sellers</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="p-1 mb-1 fw-bold menu-head mt-3"><span>Top subject</span></div>
-                      <ul class="list-unstyled mt-2">
-                        <li>ChapterOne Book of the year</li>
-                        <li>ChapterOne Signed books</li>
-                        <li>ChapterOne All best sellers</li>
-                        <li>ChapterOne Book 4</li>
-                        <li>ChapterOne Signed books</li>
-                        <li>ChapterOne All best sellers</li>
-                        <li>Coming soon</li>
-                        <li>Signed books</li>
-                        <li>All best sellers</li>
-                        <li>Book 4</li>
-                        <li>Ny Best Sellers</li>
-                        <li>Best sellers</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item"><a class="bs-nav-link nav-link linkText">Fiction</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Notification</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Kids</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li>
-            <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <img class="img-fluid banner1" src="assets/images/banner-slider/Ad_Banner.jpg" />
-  </section>
-
-
-  <!-- nav end -->
-
-  <!-- @@@@@@@@@@@@ -->
-
-  <section class="Product_detail">
-    <nav class="breadcrumb p-3" style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active small">Home</li>
-        <li class="breadcrumb-item active small" aria-current="page">Product</li>
-      </ol>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-12 col-sm-12 col-12 ">
-          <div class="row flex-col-reverse">
-            <!-- <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-              <div class="product-thumb">
-                <img src="assets/images/books/03.jpg">
-              </div>
-              <div class="product-thumb">
-                <img src="assets/images/books/03.jpg">
-              </div>
-              <div class="product-thumb">
-                <img src="assets/images/books/03.jpg">
-              </div>
-              <div class="product-thumb">
-                <img src="assets/images/books/03.jpg">
-              </div>
-            </div> -->
-            <div class="col-lg-9 col-md-12 col-sm-12 col-12 product-img-container ">
-              <div class="product-img-wrapper">
-                <img class="product-img" src="assets/images/books/03.jpg" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal">
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-scrollable mx-auto">
-                    <div class="modal-content">
-
-                      <div class="modal-body">
-                        <div class="d-flex justify-content-end mb-3">
-
-                          <i class="bi bi-x close-icon me-2 fs-3 text-success border-1" data-bs-dismiss="modal"
-                            aria-label="Close"></i>
-                          </i>
+                            </ul>
                         </div>
-
-                        <div class="d-flex justify-content-center">
-                          <img class="modal-img" src="assets/images/books/03.jpg">
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">About Us</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="about-us.html">About ChapterOne</a></li>
+                            </ul>
                         </div>
-                      </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">Quick Help</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="#">Help Center</a></li>
+                            </ul>
+                        </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">Shop by Category</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="#">Fall's Biggest Books</a></li>
+                                <li class="ft-promo-link"><a class="" href="#" target="_blank">Fiction</a></li>
+                                <li class="ft-promo-link"><a class="" href="#" target="_blank">Nonfiction</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Kids</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Teens & YA</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Greeting Cards</a></li>
+                            </ul>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- <div class="text-center mt-2">
-                <div class="mt-3">
-                  <i class="bi bi-heart heart-icon"></i>
-                  <a class="link">Add to Wishlist</a>
+                <div class="col-lg-3 ps-lg-5">
+                    <div class="row fsocial">
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/fb.svg" /></a>
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/twitter.svg" /></a>
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/insta.svg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ft-legel my-3 border-top container mx-auto">
+            <div class="d-flex flex-wrap flex-row justify-content-between">
+                <ul class="list-inline footerList-nav">
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Terms of Use</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Copyright &amp; Trademark</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#" target="_blank">Privacy</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#" target="_blank">Do Not Sell My Personal Information</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Accessibility</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Cookie Policy</a>
+                    </li>
+                    <li class="list-inline-item p-2"><a class="link" href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- Cart ======================================================= -->
+    <section class="cartslide">
+        <div class="cart">
+            <div id="sidebar">
+                <div class="d-flex justify-content-between ms-4 mt-2 mb-2">
+                    <div class="d-flex align-items-center">
+                        <p class="presentation">Shopping Cart</p>
+                        <div class="cart-icon2">
+                            <img id="hover_btn" src="assets/images/icons-mic/cart.svg" alt="">
+                            <span class="product-count">0</span>
+                        </div>
+                    </div>
+                    <div id="close_btn m-2">
+                        <i class="fa fa-close fs-2 closebtn" style="padding:0 1rem;" onclick="closeSidebar()"></i>
+                        <!-- <a  class="closebtn" onclick="closeSidebar()">&times;</a> -->
+                        <!-- <i class="bi bi-x p-2 fs-1" onclick="closeSidebar()"></i> -->
+                    </div>
                 </div>
 
-              </div> -->
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-          <div class="pdp-header-info">
-            <p class="pdp-header-title ">Kingdom of the Cursed (ChapterOne Exclusive Edition)</p>
-            <span id="key-contributors"> by <a class="link pdp-book-author" href="#">Kerri Maniscalco</a>
-            </span>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <span class="ms-4">(0)</span>
-            </div>
-          </div>
-          <!-- <div>
-            <div class="pdp-info-format">
-              <p class="me-2 mb-2">Hardcover</p>
-              <span>(ChapterOne Exclusive Edition)</span>
-            </div>
-          </div>
-          <div class="d-flex pdp-commerce-format-container">
-            <div class="pdp-commerce-format selected">
-              <p>BN Exclusive</p>
-              <span>$14.19</span>
-            </div>
-            <div class="pdp-commerce-format">
-              <p>Hardcover</p>
-              <span>$16.99</span>
-            </div>
-            <div class="pdp-commerce-format">
-              <p>NOOK Book</p>
-              <span>$10.99</span>
-            </div>
-            <div class="pdp-commerce-format">
-              <p>Audio CD</p>
-              <span>$40.00</span>
-            </div>
-          </div> -->
-          <div class="price-current-old-details">
-            <span id="pdp-cur-price" class="price current-price ml-0"><sup>$</sup>14.99</span>
-            <s class="old-price">$18.99</s>
-            <span class="saved-percent">Save 21%</span>
-          </div>
-          <a class="link mt-3 view-all">View All Available Formats & Editions</a>
-
-
-          <div class="d-grid gap-2 d-md-block">
-            <button class="btn cart-btn btn-primary rounded-0 px-5 me-2" type="button">ADD TO CART</button>
-            
-            <button class="btn  rounded-0" type="button">  <i class="bi bi-heart heart-icon"></i>
-              <a class="link">Add to Wishlist</a></button>
-          </div>
-
-          <div class="shipping-message ">
-            <i class="bi bi-truck fs-5 me-2"></i>
-            <span class="small">Choose Expedited Shipping at checkout for delivery by</span>
-          </div>
-        </div>
-      </div>
-      <div class="overview-container  mt-5">
-        <p class="presentation ">Overview</p>
-        <div class="overview-wrapper">
-          <!-- <p class="h5 m-3 mb-0 bookseller-banner">Notes From Your Bookseller</p> -->
-          <div class="d-flex">
-            <div class=" m-3">
-              <p>In this stunning sequel to <i>Kingdom of the Wicked</i>, Emilia journeys to the Seven Circles
-                on her quest to avenge the death of her sister, Vittoria. Luxe world-building, dark magic,
-                and twists and turns on every page make this follow-up just as enthralling as its
-                predecessor.</p>
-              <b>This Barnes &amp; Noble Exclusive Edition features an alternate jacket, and contains a scene
-                told from Wrath’s point of view.</b>
-              <b>From&nbsp;<i>New York Times&nbsp;</i>bestselling author of&nbsp;<i>Stalking Jack the
-                  Ripper&nbsp;</i>Kerri Maniscalco comes the sizzling, sweepingly romantic sequel to
-                <i>Kingdom of the Wicked</i>!<br><br>One sister.<br>Two sinful princes.<br>Infinite
-                deception with a side of revenge…Welcome to Hell.</b>
-              <br><br>After selling her soul to
-              become Queen of the Wicked, Emilia travels to the Seven Circles with
-            </div>
-            <div class="m-3">
-              <p> the enigmatic Prince of
-                Wrath, where she's introduced to a seductive world of vice.<br><br>She vows to do whatever
-                it takes to avenge her beloved sister, Vittoria...even if that means accepting the hand of
-                the Prince of Pride, the king of demons.<br><br>The first rule in the court of the Wicked?
-                Trust no one. With back-stabbing princes, luxurious palaces, mysterious party invitations,
-                and conflicting clues about who&nbsp;<i>really</i>&nbsp;killed her twin, Emilia finds
-                herself more alone than ever before. Can she even trust Wrath, her one-time ally in the
-                mortal world...or is he keeping dangerous secrets about his true nature?&nbsp;<br><br>Emilia
-                will be tested in every way as she seeks a series of magical objects that will unlock the
-                clues of her past and the answers she craves...</p>
-              <div class="d-flex justify-content-center mt-5">
-                <a class="link read-full-text text-center">Read Full Overview <i
-                    class="bi bi-chevron-down ms-2 "></i></a>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
- 
-
-    <div class="pdp-tab-container">
-      <div class="tabset">
-        <input type="radio" name="tabset" id="tab1" aria-controls="productDetails" checked>
-        <label for="tab1" class="tab1"><a class="link">Product Details</a></label>
-
-        <input type="radio" name="tabset" id="tab2" aria-controls="aboutAuthor">
-        <label for="tab2"><a class="link">About the Author</a></label>
-
-        <input type="radio" name="tabset" id="tab3" aria-controls="readExpert">
-        <label for="tab3"><a class="link">Read An Expert</a></label>
-        <div class="tab-panels">
-          <section id="productDetails" class="tab-panel">
-            <div id="ProductDetailsTab">
-              <h2 class="text-center presentation fst-normal">Product Details</h2>
-              <table class="plain mx-auto mt-4">
-                <tbody>
-                  <tr>
-                    <th>ISBN-13:</th>
-                    <td>9780316321969</td>
-                  </tr>
-                  <tr>
-                    <th>Publisher:</th>
-                    <td>
-                      <a href="#" class="link">Little, Brown and Company</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Publication date:</th>
-                    <td>10/05/2021</td>
-                  </tr>
-                  <tr>
-                    <th>Series:</th>
-                    <td>
-                      <a href="#" class="link">Kingdom of the Wicked Series</a>, #2
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Edition description:</th>
-                    <td>ChapterOne Exclusive Edition</td>
-                  </tr>
-                  <tr>
-                    <th>Pages:</th>
-                    <td>448</td>
-                  </tr>
-                  <tr>
-                    <th>Sales rank:</th>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <th>Product dimensions:</th>
-                    <td> 5.90(w) x 9.10(h) x 1.60(d)</td>
-                  </tr>
-                  <tr>
-                    <th>Age Range:</th>
-                    <td>14 - 18 Years</td>
-                  </tr>
-                </tbody>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </section>
-          <section id="aboutAuthor" class="tab-panel">
-            <div id="MeetTheAuthor">
-              <h2 class="text-center presentation fst-normal">About the Author</h2>
-              <div class="expandable-section">
-                <div class="content ">
-                  <b>Kerri Maniscalco</b> grew up in a semi-haunted house outside New York City,
-                  where her fascination with gothic settings began. In her spare time she reads
-                  everything she can get her hands on, cooks all kinds of food with her family and
-                  friends, and drinks entirely too much tea while discussing life's finer points
-                  with her cats. She is the author of the #1 <i>New York Times </i>bestselling
-                  <i>Stalking Jack the Ripper </i>quartet.
+                <div class="free-shipping-rule">
+                    <p class="mb-0">
+                        <span class="text-uppercase">
+                            Add <span class="qualify-price">$21.01</span> of eligible items to qualify for FREE Shipping
+                            <a class="text-dark" href="#"><u><strong>See Details</strong></u></a></span>
+                    </p>
                 </div>
-              </div>
+
+                <div class="mini-cart-items-wrapper">
+
+                    <!-- Cart Item 1 -->
+                    <div class="mini-cart-items border-bottom">
+                        <div>
+                            <img src="assets/images/books/book1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <ul class="description ms-3 list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-dark">The Thursday Murder Club: A
+                                        Novel</a>
+                                </li>
+                                <li class="mt-2">
+                                    <span class="new-price fw-bold"> $13.99</span>
+                                    <s class="text-secondary"> $17.00</s>
+                                </li>
+                                <li class="d-flex justify-content-start align-items-center mt-3">
+                                    <span class="symbol me-2"><a href="#">-</a></span>
+                                    <input type="text" value="1" name="" class="item-count me-2 rounded-0"
+                                        style="width: 80px;" id="">
+                                    <span class="symbol"><a href="#">+</a></span>
+                                </li>
+                                <li class="d-flex mt-3 align-items-baseline">
+                                    <a class="save-leter" href="#">Save for Later</a>
+                                    <a class="remove ms-3" href="#">Remove</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Cart Item 2 -->
+                    <div class="mini-cart-items border-bottom">
+                        <div>
+                            <img src="assets/images/books/book1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <ul class="description ms-3 list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-dark">The Thursday Murder Club: A
+                                        Novel</a>
+                                </li>
+                                <li class="mt-2">
+                                    <span class="new-price fw-bold"> $13.99</span>
+                                    <s class="text-secondary"> $17.00</s>
+                                </li>
+                                <li class="d-flex justify-content-start align-items-center mt-3">
+                                    <span class="symbol me-2"><a href="#">-</a></span>
+                                    <input type="text" value="1" name="" class="item-count me-2 rounded-0"
+                                        style="width: 80px;" id="">
+                                    <span class="symbol"><a href="#">+</a></span>
+                                </li>
+                                <li class="d-flex mt-3 align-items-baseline">
+                                    <a class="save-leter" href="#">Save for Later</a>
+                                    <a class="remove ms-3" href="#">Remove</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add-coupon">
+                        <div>
+                            <a href="#" class="text-decoration-none text-dark" onclick="coupan()">Add Coupon Code
+                                <i class="fa fa-circle-plus"></i>
+                            </a>
+                        </div>
+                        <div id="coupon-tog" class="addCoupon-search">
+                            <input type="text" class="form-control rounded-0" placeholder="Apply Coupon Code" />
+                            <button type="button" class="btn btn-primary coupan_btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Subtotal (1&nbsp;item)</div>
+                                <div class="price">$13.99</div>
+                            </div>
+                        </div>
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Estimated Shipping</div>
+                                <div class="price">$4.99</div>
+                            </div>
+                        </div>
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Estimated Tax</div>
+                                <div class="price">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-total-container pb-5">
+                    <div class="d-flex justify-content-between pt-4">
+                        <div class="text-uppercase o-total">Order Total</div>
+                        <div class="total-price">$18.98</div>
+                    </div>
+                    <button type="button" class="btn btn-primary checkout_btn">CONTINUE TO CHECKOUT</button>
+                    <div class="checkout-with">Or Checkout With</div>
+                    <img src="assets/images/icons-mic/pay.svg" class="img-fluid d-block mx-auto" width="200px" alt="" />
+                </div>
             </div>
-          </section>
-          <section id="readExpert" class="tab-panel">
-            <div id="ReadAnExpert">
-              <div class="read-an-excerpt text-center">
-                <h2 class="text--center">Read an Excerpt</h2>
-                <p>
-                  <b>Prologue<br></b><br>History does not repeat, but it does instruct. As the
-                  Founding Fathers debated our Constitution, they took instruction from the history
-                  they knew. Concerned that&nbsp;the democratic republic they envisioned would
-                  collapse, they contemplated the descent of ancient democracies and republics into
-                  oligarchy and empire. As they&nbsp;knew, Aristotle warned that inequality brought
-                  instability, while Plato believed that&nbsp;demagogues exploited free speech to
-                  install themselves as tyrants. In founding a democratic republic upon law and
-                  establishing a system of checks&nbsp;and balances, the Founding Fathers sought to
-                  avoid the evil that they, like the ancient philosophers, called TYRANNY. They had in
-                  mind the usurpation of power by a single individual or group, or the circumvention
-                  of law by rulers for their own benefit.
-                </p>
-
-                <p id="read_expert_panel">
-                  Much of the succeeding political
-                  debate in the United States has concerned the problem of tyranny within American
-                  society: over slaves and women, for example.&nbsp;<br><br>It is thus a primary
-                  American tradition to consider history when our political order seems
-                  imperiled.&nbsp;If we worry today that the American experiment is threatened by
-                  tyranny, we can follow the example of the Founding Fathers and contemplate the
-                  history of other democracies and republics. The good news is that we can&nbsp;draw
-                  upon more recent and relevant examples than ancient Greece&nbsp;and Rome. The bad
-                  news is that the history of modern democracy is&nbsp;also one of decline and fall.
-                  Since the American colonies declared their independence from a British monarchy that
-                  the Founders deemed “tyrannical,” European history has seen three major democratic
-                  moments: after the First World War in 1918, after the Second World War in 1945, and
-                  after the end of communism in 1989. Many of the democracies founded at these
-                  junctures failed, in circumstances that in some important respects resemble our own.
-                  <br><br>History can familiarize, and it can warn. In the late nineteenth century,
-                  just as in the late&nbsp;twentieth century, the expansion of global trade generated
-                  expectations of progress. In the&nbsp;early twentieth century, as in the early
-                  twenty-first, these hopes were challenged by new&nbsp;visions of mass politics in
-                  which a leader or a party claimed to directly represent the will of the&nbsp;people.
-                  European democracies collapsed into right-wing authoritarianism and fascism in the
-                  1920s&nbsp;and ’30s. The communist Soviet Union, established in 1922, extended its
-                  model into Europe in&nbsp;the 1940s. The European history of the twentieth century
-                  shows us that societies can break,&nbsp;democracies can fall, ethics can collapse,
-                  and ordinary men can find themselves standing over death pits with guns
-                  in&nbsp;their hands. It would serve us well today to understand why. <br><br>Both
-                  fascism and communism were responses to globalization: to the real and perceived
-                  inequalities it created, and the apparent helplessness of the democracies in
-                  addressing them. Fascists rejected reason in the name of will, denying objective
-                  truth in favor of a glorious myth articulated by leaders who claimed to
-                  give&nbsp;voice to the people. They put a face on globalization, arguing that its
-                  complex challenges were the result of a conspiracy against the nation. Fascists
-                  ruled for a decade or two, leaving behind an intact intellectual legacy that
-                  grows&nbsp;more relevant by the day. Communists ruled for longer, for nearly seven
-                  decades in the Soviet Union, and more than four decades in much of
-                  eastern&nbsp;Europe. They proposed rule by a disciplined party elite with a monopoly
-                  on reason that would guide society toward a certain future according to supposedly
-                  fixed laws of history. <br><br>We might be tempted to think that our democratic
-                  heritage automatically protects us from such threats. This is a misguided reflex. In
-                  fact, the precedent set by the Founders demands that we examine history to
-                  understand the deep sources of tyranny, and to consider the proper responses to it.
-                  Americans today are no wiser than the Europeans who saw democracy yield to fascism,
-                  Nazism, or communism in the twentieth century. Our&nbsp;one advantage is that we
-                  might learn from their experience. Now is a good time to do so. <br><br>This book
-                  presents twenty lessons from the twentieth century,&nbsp;adapted to the
-                  circumstances of today.
-                </p>
-                <a class="link text-decoration-underline" id="read_expect_flip">See More</a>
-              </div>
-            </div>
-          </section>
         </div>
-      </div>
-    </div>
-  
+    </section>
 
-  </section>
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
 
-  <!-- @@@@@@@@@@@@ -->
-
-
-
-
-
-  <!-- footer start -->
-  <section class="ft-normal mb-3 mx-4 mt-4 ">
-
-    <div class="container mx-auto">
-      <!-- footer block -->
-      <div class="row border-top footer-box">
-      
-        <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
-          <h5><a href=""><i class="fa fa-id-card-o" aria-hidden="true"></i></a></h5>
-          <p class="f-head1 mb-1">Free Delivery Across India <br> Available With Every Order</p>
-          <!-- <p class="f-head2 mb-2">5% Back on All ChapterOne&nbsp;Purchases</p> -->
-          <p class="ft-promo-link">
-            <a href="#" target="_blank"> Learn More ></a>
-          </p>
-        </div>
-        <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
-          <h5><a href=""><i class="fa fa-id-card-o" aria-hidden="true"></i></a></h5>
-          <p class="f-head1 mb-1">Over 1 Lakh Books <br> Available Online</p>
-          <p class="ft-promo-link">
-            <a href="#" target="_blank"> Learn More ></a>
-          </p>
-        </div>
-        <div class=" border-bottom col-12 col-lg-4  pt-4 px-4">
-          <h5><a href=""><i class="fa fa-id-card-o" aria-hidden="true"></i></a></h5>
-          <p class="f-head1 mb-1">100% Safe And <br> Secure Payments</p>
-            <p class="ft-promo-link">
-            <a href="#" target="_blank"> Learn More ></a>
-          </p>
-        </div>
-      </div>
-
-      <!--footer block end  -->
-      <div class="my-4 my-md-5 row">
-        <div class="col">
-          <div class="row footer-list">
-            <div class="col footer-wrap">
-              <p class="mb-1 f-head">ChapterOne Services</p>
-              <ul class="list-unstyled">
-                <li class="ft-promo-link"><a class="" href="refund-and-return-policy.html">Refund and Return Policies</a></li>
-                <li class="ft-promo-link"><a class="" href="#">Privacy Policy</a></li>
-                <li class="ft-promo-link"><a class="" href="term-of-use.html">Terms Of use</a></li>
-               
-              </ul>
-            </div>
-            <div class="col footer-wrap">
-              <p class="mb-1 f-head">About Us</p>
-              <ul class="list-unstyled">
-                <li class="ft-promo-link"><a class="" href="about-us.html">About ChapterOne</a></li>
-              </ul>
-            </div>
-            <div class="col footer-wrap">
-              <p class="mb-1 f-head">Quick Help</p>
-              <ul class="list-unstyled">
-                <li class="ft-promo-link"><a class="" href="#">Help Center</a></li>
-               
-              </ul>
-            </div>
-           
-            <div class="col footer-wrap">
-              <p class="mb-1 f-head">Shop by Category</p>
-              <ul class="list-unstyled">
-                <li class="ft-promo-link"><a class="" href="#">Fall's Biggest Books</a></li>
-                <li class="ft-promo-link"><a class="" href="#" target="_blank">Fiction</a></li>
-                <li class="ft-promo-link"><a class="" href="#" target="_blank">Nonfiction</a></li>
-                <li class="ft-promo-link"><a class="" href="#">Kids</a></li>
-                <li class="ft-promo-link"><a class="" href="#">Teens & YA</a></li>
-                <li class="ft-promo-link"><a class="" href="#">Greeting Cards</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 ps-lg-5">
-          <div class="row fsocial">
-            <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/fb.svg" /></a>
-            <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/twitter.svg" /></a>
-            <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/insta.svg" /></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="ft-legel my-3 border-top container mx-auto">
-      <div class="d-flex flex-wrap flex-row justify-content-between">
-        <ul class="list-inline footerList-nav">
-          <li class="list-inline-item p-2">
-            <a class="link" href="#">Terms of Use</a>
-          </li>
-          <li class="list-inline-item p-2">
-            <a class="link" href="#">Copyright &amp; Trademark</a>
-          </li>
-          <li class="list-inline-item p-2">
-            <a class="link" href="#" target="_blank">Privacy</a>
-          </li>
-          <li class="list-inline-item p-2">
-            <a class="link" href="#" target="_blank">Do Not Sell My Personal Information</a>
-          </li>
-          <li class="list-inline-item p-2">
-            <a class="link" href="#">Accessibility</a>
-          </li>
-          <li class="list-inline-item p-2">
-            <a class="link" href="#">Cookie Policy</a>
-          </li>
-          <li class="list-inline-item p-2"><a class="link" href="#">Sitemap</a></li>
-        </ul>
-  
-        <p class="copy-right float-right p-2">
-          ©1997-2021 Barnes &amp; Noble Booksellers, Inc. 33 East 17th Street, New York, NY 10003
-        </p>
-      </div>
-    </footer>
-  </section>
-  <!-- footer end -->
-
-
-  <script src="assets/js/script.js"></script>
-  <!--js cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/js/slick.min.js"></script>
-  <script type="text/javascript" src="assets/js/slick.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(".slick-recommendation").slick({
-        infinite: false,
-        slidesToScroll: 1,
-        arrows: true,
-        slidesToShow: 7,
-        prevArrow: '<i class="bi bi-chevron-left fs-4 slide-arrow prev-arrow">',
-        nextArrow: '<i class="bi bi-chevron-right fs-4 slide-arrow next-arrow">',
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-      })
-
-      $("#read_expect_flip").click(function () {
-        var kkk = $(this).text();
-        if (kkk == "See More") {
-          $("#read_expect_flip").text("See Less");
-        } else {
-          $("#read_expect_flip").text("See More");
-        }
-        $("#read_expert_panel").slideToggle("slow");
-      });
-
-      $("#flip_btn").click(function () {
-        var kkk = $(this).text();
-        if (kkk == "Read More") {
-          $("#flip_btn").text("Read Less");
-        } else {
-          $("#flip_btn").text("Read More");
-        }
-        $("#panel").slideToggle("slow");
-      });
-    })
-  </script>
 
 </body>
 
