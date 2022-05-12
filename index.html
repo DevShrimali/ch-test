@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ChapterOne - Online Book Store | Buy Largest Collection Books </title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.svg">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- @HEADER ======================================================================================================================= -->
+    <!-- Pre-navbar -->
+    <div class="pre-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto mt-2">
+                    <div id="carouselHeader" class="carousel slide pre-navCarousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><a href="">Free Shipping on Orders of $35 or More</a>
+                            </div>
+                            <div class="carousel-item"><a href="">Blameworthy eBooks Under $5</a></div>
+                            <div class="carousel-item"><a href="">Free Shipping on Orders of $35 or More</a></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Account -->
+        <div class="navbar navbar-expand-lg navbar-light">
+            <div class="account-options">
+                <div class="d-none d-lg-block">
+                </div>
+                <div class="right-sidebar d-none d-lg-block">
+                    <ul class="navbar-nav bs-navbar-nav">
+                        <li class="nav-item dropdown mobile-hide pe-2">
+                            <a class="bs-nav-link nav-link">
+                                <div class="d-flex justify">
+                                    <!-- dropdown code -->
+                                    <div class="dropdown">
+                                        <i class="fa-regular fa-circle-user fs-6 personCircle me-2"></i>
+                                        <span class="pe-2" id="MyAccountDropdown" data-co-toggle="dropdown"
+                                            aria-expanded="false"> My account</span>
+                                        <i class="fa fa-chevron-down down-arrow1"></i>
+                                        <div class="dropdown-menu my_account_dropdown"
+                                            aria-labelledby="MyAccountDropdown">
+                                            <div class="text-center btn_wrapper">
+                                                <a type="button " class="btn btn-success sign_in_btn"
+                                                    data-co-toggle="modal" data-co-target="#signInModal">Sign In</a>
+                                                <a class="link" data-co-toggle="modal"
+                                                    data-co-target="#registerModal">Create an
+                                                    account</a>
+                                            </div>
+                                            <ul class="list-unstyled pt-3">
+                                                <li>Manage Account</li>
+                                                <li>Order Status</li>
+                                                <li>My NOOK</li>
+                                                <li>Address Book</li>
+                                                <li>Payment Methods</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- dropdown code -->
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown mobile-hide pt-1">
+                            <a class="bs-nav-link nav-link" href="wishlist.html"><img class="me-2"
+                                    src="assets/images/icons-mic/wish-list.svg" />wishlist</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Brand, Search & Cart -->
+        <div class="bs-logo-bar my-2 d-flex justify-content-lg-between align-items-center">
+            <span class="btn-sidebar d-lg-none" onclick="openNav()">&#9776;</span>
+            <div class="logo_main">
+                <a href="index.html" title=" Books">
+                    ChapterOne Books
+                </a>
+            </div>
+
+            <div class="input-group search-input py-1 px-5 dropdown">
+                <div class="input-group">
+                    <div class="select-style">
+                        <select name="order" class="form-select rounded-0">
+                            <option class="topshow">All</option>
+                            <option value="a">Book</option>
+                            <option value="b">Notice</option>
+                            <option value="c">Horror</option>
+                            <option value="d">Cider</option>
+                            <option value="e">Mead</option>
+                            <option value="f">Others</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control rounded-0" aria-label="Text input with dropdown button"
+                        placeholder="Search by Title,Author,Keyword or ISBN" id="searchip" onkeyup="searchFunction()" />
+                    <button class="btn searchbtn rounded-0 btn-outline-secondary" type="button"
+                        id="inputGroupFileAddon04">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <ul class="results rounded-0" id="tool">
+                        <li><a href="index.html">Amy Wine house:Beyond Black </a></li>
+                        <li><a href="index.html">Will </a></li>
+                        <li><a href="index.html">This Bright Future: A </a></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li><a href="index.html">Hip-Hop</a></li>
+                        <li><a href="index.html">The Rolling Stones: Unzipped</a></li>
+                        <li><a href="index.html">The Lyrics: 1956 to th</a></li>
+                        <li><a href="index.html">Carpenters: The Music</a></li>
+                        <li><a href="index.html">Music Is History </a></li>
+                        <li><a href="index.html">Search Result #2</a></li>
+                        <li><a href="index.html">Search Result #3</a></li>
+                        <li><a href="index.html">Search Result #1</a></li>
+                        <li><a href="index.html">Search Result #2</a></li>
+                        <li><a href="index.html">Search Result #3</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <a class="bs-nav-link nav-link d-lg-none wishlistArea rhf-desktop-hide">
+                <i class="fa-regular fa-heart fs-6 me-2 me-2"></i> <span>wishlist</span>
+            </a>
+            <div class="cart-icon2" id="hover_btn">
+                <img id="hover_btn" src="assets/images/icons-mic/cart.svg" alt="">
+                <span class="product-count">0</span>
+            </div>
+            <!-- work here -->
+
+            <a class="bs-nav-link nav-link rhf-desktop-hide events" data-bs-toggle="modal" data-bs-target="#Modal">
+                <span><img class="" src="assets/images/icons-mic/person-circle.svg"></span>
+                <span id="MyAccountDropdown" data-bs-toggle="dropdown" aria-expanded="false"></span>
+            </a>
+
+        </div>
+        <!-- Navbar Links -->
+        <div class="navbar navbar-expand-lg navbar-light booksNav d-none d-lg-flex">
+            <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light mobile-hide cat-links">
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">All Books</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Fiction</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Notification</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Kids</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li><span
+                    class="linkline">|</span>
+                <!-- <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li><span class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li><span class="linkline">|</span> -->
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Romance</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Other</a></li><span
+                    class="linkline">|</span>
+            </ul>
+        </div>
+        <!-- Mobile SliderNav -->
+        <div id="mySidenav" class="sidenav">
+            <div class="sidebar-header">
+                <h4>Menu</h4>
+                <a href="javascript:;" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light booksNav">
+
+                <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light ">
+                    <li class="nav-item dropdown mobile-account">
+                        <a class="bs-nav-link nav-link linkText" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-circle-user fs-6 personCircle me-2"></i>
+                            <span class="pe-2" id="MyAccountDropdown" data-co-toggle="dropdown" aria-expanded="false">
+                                My account</span>
+                        </a>
+
+                        <div class="dropdown-menu my_account_dropdown bs-menu container"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <div class="text-center btn_wrapper">
+                                <a type="button " class="btn btn-success sign_in_btn" data-co-toggle="modal"
+                                    data-co-target="#signInModal">Sign In</a>
+                                <a class="link" data-co-toggle="modal" data-co-target="#registerModal">Create an
+                                    account</a>
+                            </div>
+                            <div class="row">
+                                <ul class="list-unstyled pt-3">
+                                    <li>Manage Account</li>
+                                    <li>Order Status</li>
+                                    <li>My NOOK</li>
+                                    <li>Address Book</li>
+                                    <li>Payment Methods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">All</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Notification</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Kids</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Ad-Banner -->
+    <section>
+        <a href="" class="hover-border">
+            <img class="img-fluid" src="assets/images/banner-slider/Ad_Banner.jpg" />
+        </a>
+    </section>
+    <!-- @SLIDER======================================================================================================================= -->
+    <section>
+        <div class="slider-fade">
+
+            <div>
+                <img class="d-block w-100 img-fluid" src="assets/images/banner-slider/slider01.jpg" alt="">
+            </div>
+
+            <div>
+                <img class="d-block w-100 img-fluid" src="assets/images/banner-slider/slider02.jpg" alt="">
+            </div>
+            <div>
+                <img class="d-block w-100 img-fluid" src="assets/images/banner-slider/slider03.jpg" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="description1 pb-2 my-4 text-center">
+                <p class="mb-1 mb-lg-0">FIND YOUR PLACE AT ChapterOne'S ONLINE BOOKSTORE &nbsp;</p>
+                <span>Over 5 million books ready to ship & 3.6 million eBooks to download right now. Curbside pickup
+                    available in most stores!</span>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <!--CATEGORIES ======================================================================================================================= -->
+    <section>
+        <div class="container icon-slider icon-slider-all pt-2 pb-3">
+            <div class="slick-icon">
+                <div class="cat-img">
+                    <img class="img-fluid mx-auto" src="assets/images/cat/bs.png" />
+                    <p class="text-center mt-2 small">BESTSELLERS</p>
+                </div>
+                <div class="cat-img">
+                    <img class="img-fluid mx-auto" src="assets/images/cat/cl.png" />
+                    <p class="text-center mt-2 small">CLASSIC</p>
+                </div>
+                <div class="cat-img">
+                    <img class="img-fluid mx-auto" src="assets/images/cat/fs.png" />
+                    <p class="text-center mt-2 small">FICTION</p>
+                </div>
+                <div class="cat-img">
+                    <img class="img-fluid mx-auto" src="assets/images/cat/rm.png" />
+                    <p class="text-center mt-2 small">ROMANCE</p>
+                </div>
+                <div class="cat-img">
+                    <img class="img-fluid mx-auto" src="assets/images/cat/ya.png" />
+                    <p class="text-center mt-2 small">YA</p>
+                </div>
+                <div class="cat-img">
+                    <img class="img-fluid mx-auto" src="assets/images/cat/tr.png" />
+                    <p class="text-center mt-2 small">MYSTERY & CRIME</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Details -->
+    <!-- Categories Slider -->
+    <!--  -->
+    <!-- @Product CARDS SLIDER ======================================================================================================================= -->
+    <section>
+        <div class="trending container">
+            <!-- Product Category Title -->
+            <div class="mb-4">
+                <h2 class="fst-italic">Now Trending</h2>
+            </div>
+            <!-- Product Cards-->
+            <div class="mx-md-5 pb-4 pb-md-5 mb-3 icon-slider-all">
+                <div class="slick-slider-kids">
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/01.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock</h2>
+                            </div>
+                            <img src="assets/images/books/02.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/03.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/04.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3 ">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3 ">
+                            <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/6.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class=" me-3 ">
+                            <h6 class="mt-2"><span class="author-dec">Realm Breaker</span></h6>
+                            <p class="auth-name"><u>Victoria</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="product-card">
+                        <div class="img_container ">
+                            <div class="rectangle">
+                                <h2>out of stock
+                                </h2>
+                            </div>
+                            <img src="assets/images/books/7.jpg" class="kids_book_img img-fluid" />
+                            <div class="overlay">
+                                <button class="order_now_btn">Quick Add</button>
+                            </div>
+                        </div>
+                        <div class="me-3">
+                            <h6 class="mt-2"><span class="author-dec">Blood And Honey</span></h6>
+                            <p class="auth-name"><u>Naomi parry</u></p>
+                            <div class="rating">
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                                <img src="assets/images/icons-mic/whitestar.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- @BANNER-AD======================================================================================================================= -->
+    <section>
+        <div class="billboard_container container mx-auto my-5">
+            <img class="img-fluid" src="assets/images/banner-slider/min-bann.jpg" />
+        </div>
+    </section>
+    <!-- @AUTHOR CARDS SLIDER======================================================================================================================= -->
+    <section>
+        <div class="container my-5">
+            <div class="d-flex justify-content-between mb-3">
+                <h2 class="fst-italic ms-3">Top Authors</h2>
+                <a class="me-4 mt-2 link2 seeAll-slider" href="#">See All</a>
+            </div>
+            <!--  -->
+            <div class="container icon-slider icon-slider-all">
+                <div class="slick-icon-author">
+                    <div class="author">
+                        <img class="img-fluid mx-auto" src="assets/images/auther/1641656498.jpg" />
+                        <p class="text-center mt-2 small">Stephanie Garbe</p>
+                    </div>
+                    <!--  -->
+                    <div class="author">
+                        <img class="img-fluid mx-auto" src="assets/images/auther/1641656687.jpg" />
+                        <p class="text-center mt-2 small">Tahereh Mafi</p>
+                    </div>
+                    <!--  -->
+                    <div class="author">
+                        <img class="img-fluid mx-auto" src="assets/images/auther/1641656896.jpg" />
+                        <p class="text-center mt-2 small">Marissa Meyer</p>
+                    </div>
+                    <!--  -->
+                    <div class="author">
+                        <img class="img-fluid mx-auto" src="assets/images/auther/1641657042.jpg" />
+                        <p class="text-center mt-2 small">Becky Albertall</p>
+                    </div>
+                    <!--  -->
+                    <div class="author">
+                        <img class="img-fluid mx-auto" src="assets/images/auther/1641657202.jpg" />
+                        <p class="text-center mt-2 small">Rainbow Rowell</p>
+                    </div>
+                    <!--  -->
+                    <div class="author">
+                        <img class="img-fluid mx-auto" src="assets/images/auther/1641657399.jpg" />
+                        <p class="text-center mt-2 small">Shirley Jackson</p>
+                    </div>
+                    <!--  -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- @FICTIONAL======================================================================================================================= -->
+    <section>
+        <div class="container my-5">
+            <h2 class="fst-italic">Books That Hit the Right Note</h2>
+            <div class="book-promo my-5 px-md-4">
+                <div class="row">
+                    <div class="left-section col-lg-4 text-center">
+                        <img src="assets/images/books/10.jpg" />
+                        <h6 class="mt-3 px-5"><span class="px-3 author-dec">The Storyteller: Tales of Life and
+                                Music</span></h6>
+                        <p class="mt-3 mb-2 mb-0 auth-name mx-auto text-center"><u>Dave Grohl</u></p>
+                        <div class="rating mx-auto justify-content-center">
+                            <img src="assets/images/icons-mic/star.svg" />
+                            <img src="assets/images/icons-mic/star.svg" />
+                            <img src="assets/images/icons-mic/star.svg" />
+                            <img src="assets/images/icons-mic/star.svg" />
+                            <img src="assets/images/icons-mic/whitestar.svg" />
+                        </div>
+                        <p class="author-info">
+                            From Nirvana to current day Foo Fighters, Dave Grohl tells his story and brings us a
+                            first-hand look at
+                            the grunge movement and rock scene from the 80s and beyond.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 bookPromo-inner">
+                        <div class="row row1">
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container ">
+                                    <div class="rectangle">
+                                        <h2>out Of stock
+                                        </h2>
+                                    </div>
+                                    <div class="triangle-l"></div>
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class=" me-3 ">
+                                    <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span></h6>
+                                    <p class="my-0 auth-name"><u>Naomi parry</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container ">
+
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class="me-3 ">
+                                    <h6 class="mt-2"><span class="author-dec"> The Rolling Stones: Unzipped</span></h6>
+                                    <p class="my-0 auth-name"><u>The Rolling Stones</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container">
+                                    <div class="rectangle">
+                                        <h2>Best Seller
+                                        </h2>
+                                    </div>
+                                    <div class="triangle-l"></div>
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class=" me-3">
+                                    <h6 class="mt-2"><span class="author-dec"> The Lyrics: 1956 to the Present
+                                            (Two-Volume Set)</span>
+                                    </h6>
+                                    <p class="my-0 auth-name"><u>Paul McCartney</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container">
+
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class="me-3">
+                                    <h6 class="mt-2"><span class="author-dec"> Carpenters: The Music Legacy</span></h6>
+                                    <p class="my-0 auth-name"><u>Paul McCartney</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container">
+
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class=" me-3">
+                                    <h6 class="mt-2"><span class="author-dec">Will</span></h6>
+                                    <p class="my-0 auth-name"><u>Will Smith</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container ">
+                                    <div class="rectangle">
+                                        <h2>Buy 1, Get 1 50% Off
+                                        </h2>
+                                    </div>
+                                    <div class="triangle-l"></div>
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class=" me-3">
+                                    <h6 class="mt-2"><span class="author-dec"> This Bright Future: A Memoir (ChapterOne
+                                            Exclusive
+                                            Edition)</span>
+                                    </h6>
+                                    <p class="my-0 auth-name"><u>Bobby Hall</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container ">
+                                    <div class="rectangle">
+                                        <h2>Buy 1, Get 1 50% Off
+                                        </h2>
+                                    </div>
+                                    <div class="triangle-l"></div>
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class="me-3">
+                                    <h6 class="mt-2"><span class="author-dec"> Hip-Hop (And Other Things) (Signed
+                                            Book)</span></h6>
+                                    <p class="my-0 auth-name"><u>Shea Serrano</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-6 col-md-3 col-sm-6">
+                                <div class="img_container ">
+                                    <div class="rectangle">
+                                        <h2>Buy 1, Get 1 50% Off
+                                        </h2>
+                                    </div>
+                                    <div class="triangle-l"></div>
+                                    <img src="assets/images/books/10.jpg" class="kids_book_img img-fluid" />
+                                    <div class="overlay">
+                                        <button class="order_now_btn">Quick Add</button>
+                                    </div>
+                                </div>
+                                <div class="me-3">
+                                    <h6 class="mt-2"><span class="author-dec"> Hip-Hop (And Other Things) (Signed
+                                            Book)</span></h6>
+                                    <p class="my-0 auth-name"><u>Shea Serrano</u></p>
+                                    <div class="rating">
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/star.svg" />
+                                        <img src="assets/images/icons-mic/whitestar.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Or -->
+
+    </section>
+    <!-- SMALL BANNER SLIDER======================================================================================================================= -->
+
+    <section>
+        <div class="new_release container">
+            <div class="slick-slider-new_release mx-3">
+                <div class="d-flex justify-content-center content">
+                    <div>
+                        <img src="assets/images/banner-slider/banner1.jpg" class="slider-img img-fluid" />
+                        <ul class="list-unstyled">
+                            <li class="promo_msg2 fs-4 mt-2 mb-3">Turn Up the Volume(s)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <img src="assets/images/banner-slider/banner1.jpg" class="slider-img img-fluid" />
+                        <ul class="list-unstyled">
+                            <li class="promo_msg2 fs-4 mt-2 mb-3">This Puzzle Month Put it Together, Together</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <img src="assets/images/banner-slider/banner1.jpg" class="slider-img img-fluid" />
+                        <ul class="list-unstyled">
+                            <li class="promo_msg2 fs-4 mt-2 mb-3">Everyone's Talking About</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <img src="assets/images/banner-slider/banner1.jpg" class="slider-img img-fluid" />
+                        <ul class="list-unstyled">
+                            <li class="promo_msg2 fs-4 mt-2 mb-3">Save on eBooks now!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="paginator-center d-flex justify-content-center arrowArea mb-4">
+                <div>
+                    <span class="prev3 mx-2"><i class="bi bi-chevron-left fs-2"></i></span>
+                    <span class="next3 mx-2"><i class="bi bi-chevron-right fs-2"></i></span>
+                </div>
+            </div>
+        </div>
+        <!-- @ -->
+
+    </section>
+    <!-- FOOTER ================================================================================================================ -->
+    <section class="ft-normal mb-3 mx-4 mt-4 ">
+
+        <div class="container mx-auto">
+            <!-- footer block -->
+            <div class="row border-top footer-box">
+
+                <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa fa-truck" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">Free Delivery Across India <br> Available With Every Order</p>
+                    <!-- <p class="f-head2 mb-2">5% Back on All ChapterOne&nbsp;Purchases</p> -->
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+                <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa-book" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">Over 1 Lakh Books <br> Available Online</p>
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+                <div class=" border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa-star" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">100% Safe And <br> Secure Payments</p>
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+            </div>
+
+            <!--footer block end  -->
+            <div class="my-4 my-md-5 row">
+                <div class="col">
+                    <div class="row footer-list">
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">ChapterOne Services</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="refund-and-return-policy.html">Refund and
+                                        Return
+                                        Policies</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Privacy Policy</a></li>
+                                <li class="ft-promo-link"><a class="" href="term-of-use.html">Terms Of use</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">About Us</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="about-us.html">About ChapterOne</a></li>
+                            </ul>
+                        </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">Quick Help</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="#">Help Center</a></li>
+                            </ul>
+                        </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">Shop by Category</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="#">Fall's Biggest Books</a></li>
+                                <li class="ft-promo-link"><a class="" href="#" target="_blank">Fiction</a></li>
+                                <li class="ft-promo-link"><a class="" href="#" target="_blank">Nonfiction</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Kids</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Teens & YA</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Greeting Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ps-lg-5">
+                    <div class="row fsocial">
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/fb.svg" /></a>
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/twitter.svg" /></a>
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/insta.svg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ft-legel my-3 border-top container mx-auto">
+            <div class="d-flex flex-wrap flex-row justify-content-between">
+                <ul class="list-inline footerList-nav">
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Terms of Use</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Copyright &amp; Trademark</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#" target="_blank">Privacy</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#" target="_blank">Do Not Sell My Personal Information</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Accessibility</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Cookie Policy</a>
+                    </li>
+                    <li class="list-inline-item p-2"><a class="link" href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+    <!-- Models======================================================================================================================= -->
+    <div id="download-popup" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header" style="border: 0;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row  mx-auto p-5">
+                    <h4 class="pb-5">Download our mobile application for better shopping experience</h4>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" target="_blank" class="market-btn apple-btn" role="button">
+                                <span class="market-button-subtitle">Download on the</span>
+                                <span class="market-button-title">App Store</span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" target="_blank" class="market-btn google-btn" role="button">
+                                <span class="market-button-subtitle">Download on the</span>
+                                <span class="market-button-title">Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Cart -->
+    <section class="cartslide">
+        <div class="cart">
+            <div id="sidebar">
+                <div class="d-flex justify-content-between ms-4 mt-2 mb-2">
+                    <div class="d-flex align-items-center">
+                        <p class="presentation">Shopping Cart</p>
+                        <div class="cart-icon2">
+                            <img id="hover_btn" src="assets/images/icons-mic/cart.svg" alt="">
+                            <span class="product-count">0</span>
+                        </div>
+                    </div>
+                    <div id="close_btn m-2">
+                        <i class="fa fa-close fs-2 closebtn" style="padding:0 1rem;" onclick="closeSidebar()"></i>
+                        <!-- <a  class="closebtn" onclick="closeSidebar()">&times;</a> -->
+                        <!-- <i class="bi bi-x p-2 fs-1" onclick="closeSidebar()"></i> -->
+                    </div>
+                </div>
+
+                <div class="free-shipping-rule">
+                    <p class="mb-0">
+                        <span class="text-uppercase">
+                            Add <span class="qualify-price">$21.01</span> of eligible items to qualify for FREE Shipping
+                            <a class="text-dark" href="#"><u><strong>See Details</strong></u></a></span>
+                    </p>
+                </div>
+
+                <div class="mini-cart-items-wrapper">
+
+                    <!-- Cart Item 1 -->
+                    <div class="mini-cart-items border-bottom">
+                        <div>
+                            <img src="assets/images/books/book1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <ul class="description ms-3 list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-dark">The Thursday Murder Club: A
+                                        Novel</a>
+                                </li>
+                                <li class="mt-2">
+                                    <span class="new-price fw-bold"> $13.99</span>
+                                    <s class="text-secondary"> $17.00</s>
+                                </li>
+                                <li class="d-flex justify-content-start align-items-center mt-3">
+                                    <span class="symbol me-2"><a href="#">-</a></span>
+                                    <input type="text" value="1" name="" class="item-count me-2 rounded-0"
+                                        style="width: 80px;" id="">
+                                    <span class="symbol"><a href="#">+</a></span>
+                                </li>
+                                <li class="d-flex mt-3 align-items-baseline">
+                                    <a class="save-leter" href="#">Save for Later</a>
+                                    <a class="remove ms-3" href="#">Remove</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Cart Item 2 -->
+                    <div class="mini-cart-items border-bottom">
+                        <div>
+                            <img src="assets/images/books/book1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <ul class="description ms-3 list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-dark">The Thursday Murder Club: A
+                                        Novel</a>
+                                </li>
+                                <li class="mt-2">
+                                    <span class="new-price fw-bold"> $13.99</span>
+                                    <s class="text-secondary"> $17.00</s>
+                                </li>
+                                <li class="d-flex justify-content-start align-items-center mt-3">
+                                    <span class="symbol me-2"><a href="#">-</a></span>
+                                    <input type="text" value="1" name="" class="item-count me-2 rounded-0"
+                                        style="width: 80px;" id="">
+                                    <span class="symbol"><a href="#">+</a></span>
+                                </li>
+                                <li class="d-flex mt-3 align-items-baseline">
+                                    <a class="save-leter" href="#">Save for Later</a>
+                                    <a class="remove ms-3" href="#">Remove</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add-coupon">
+                        <div>
+                            <a href="#" class="text-decoration-none text-dark" onclick="coupan()">Add Coupon Code
+                                <i class="fa fa-circle-plus"></i>
+                            </a>
+                        </div>
+                        <div id="coupon-tog" class="addCoupon-search">
+                            <input type="text" class="form-control rounded-0" placeholder="Apply Coupon Code" />
+                            <button type="button" class="btn btn-primary coupan_btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Subtotal (1&nbsp;item)</div>
+                                <div class="price">$13.99</div>
+                            </div>
+                        </div>
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Estimated Shipping</div>
+                                <div class="price">$4.99</div>
+                            </div>
+                        </div>
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Estimated Tax</div>
+                                <div class="price">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-total-container pb-5">
+                    <div class="d-flex justify-content-between pt-4">
+                        <div class="text-uppercase o-total">Order Total</div>
+                        <div class="total-price">$18.98</div>
+                    </div>
+                    <button type="button" class="btn btn-primary checkout_btn">CONTINUE TO CHECKOUT</button>
+                    <div class="checkout-with">Or Checkout With</div>
+                    <img src="assets/images/icons-mic/pay.svg" class="img-fluid d-block mx-auto" width="200px" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
+
+</body>
+
+</html>

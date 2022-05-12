@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ChapterOne - Online Book Store | Buy Largest Collection Books </title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.svg">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- @HEADER ======================================================================================================================= -->
+    <!-- Pre-navbar -->
+    <div class="pre-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto mt-2">
+                    <div id="carouselHeader" class="carousel slide pre-navCarousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><a href="">Free Shipping on Orders of $35 or More</a>
+                            </div>
+                            <div class="carousel-item"><a href="">Blameworthy eBooks Under $5</a></div>
+                            <div class="carousel-item"><a href="">Free Shipping on Orders of $35 or More</a></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Account -->
+        <div class="navbar navbar-expand-lg navbar-light">
+            <div class="account-options">
+                <div class="d-none d-lg-block">
+                </div>
+                <div class="right-sidebar d-none d-lg-block">
+                    <ul class="navbar-nav bs-navbar-nav">
+                        <li class="nav-item dropdown mobile-hide pe-2">
+                            <a class="bs-nav-link nav-link">
+                                <div class="d-flex justify">
+                                    <!-- dropdown code -->
+                                    <div class="dropdown">
+                                        <i class="fa-regular fa-circle-user fs-6 personCircle me-2"></i>
+                                        <span class="pe-2" id="MyAccountDropdown" data-co-toggle="dropdown"
+                                            aria-expanded="false"> My account</span>
+                                        <i class="fa fa-chevron-down down-arrow1"></i>
+                                        <div class="dropdown-menu my_account_dropdown"
+                                            aria-labelledby="MyAccountDropdown">
+                                            <div class="text-center btn_wrapper">
+                                                <a type="button " class="btn btn-success sign_in_btn"
+                                                    data-co-toggle="modal" data-co-target="#signInModal">Sign In</a>
+                                                <a class="link" data-co-toggle="modal"
+                                                    data-co-target="#registerModal">Create an
+                                                    account</a>
+                                            </div>
+                                            <ul class="list-unstyled pt-3">
+                                                <li>Manage Account</li>
+                                                <li>Order Status</li>
+                                                <li>My NOOK</li>
+                                                <li>Address Book</li>
+                                                <li>Payment Methods</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- dropdown code -->
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown mobile-hide pt-1">
+                            <a class="bs-nav-link nav-link" href="wishlist.html"><img class="me-2"
+                                    src="assets/images/icons-mic/wish-list.svg" />wishlist</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Brand, Search & Cart -->
+        <div class="bs-logo-bar my-2 d-flex justify-content-lg-between align-items-center">
+            <span class="btn-sidebar d-lg-none" onclick="openNav()">&#9776;</span>
+            <div class="logo_main">
+                <a href="index.html" title=" Books">
+                    ChapterOne Books
+                </a>
+            </div>
+
+            <div class="input-group search-input py-1 px-5 dropdown">
+                <div class="input-group">
+                    <div class="select-style">
+                        <select name="order" class="form-select rounded-0">
+                            <option class="topshow">All</option>
+                            <option value="a">Book</option>
+                            <option value="b">Notice</option>
+                            <option value="c">Horror</option>
+                            <option value="d">Cider</option>
+                            <option value="e">Mead</option>
+                            <option value="f">Others</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control rounded-0" aria-label="Text input with dropdown button"
+                        placeholder="Search by Title,Author,Keyword or ISBN" id="searchip" onkeyup="searchFunction()" />
+                    <button class="btn searchbtn rounded-0 btn-outline-secondary" type="button"
+                        id="inputGroupFileAddon04">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <ul class="results rounded-0" id="tool">
+                        <li><a href="index.html">Amy Wine house:Beyond Black </a></li>
+                        <li><a href="index.html">Will </a></li>
+                        <li><a href="index.html">This Bright Future: A </a></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li><a href="index.html">Hip-Hop</a></li>
+                        <li><a href="index.html">The Rolling Stones: Unzipped</a></li>
+                        <li><a href="index.html">The Lyrics: 1956 to th</a></li>
+                        <li><a href="index.html">Carpenters: The Music</a></li>
+                        <li><a href="index.html">Music Is History </a></li>
+                        <li><a href="index.html">Search Result #2</a></li>
+                        <li><a href="index.html">Search Result #3</a></li>
+                        <li><a href="index.html">Search Result #1</a></li>
+                        <li><a href="index.html">Search Result #2</a></li>
+                        <li><a href="index.html">Search Result #3</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <a class="bs-nav-link nav-link d-lg-none wishlistArea rhf-desktop-hide">
+                <i class="fa-regular fa-heart fs-6 me-2 me-2"></i> <span>wishlist</span>
+            </a>
+            <div class="cart-icon2" id="hover_btn">
+                <img id="hover_btn" src="assets/images/icons-mic/cart.svg" alt="">
+                <span class="product-count">0</span>
+            </div>
+            <!-- work here -->
+
+            <a class="bs-nav-link nav-link rhf-desktop-hide events" data-bs-toggle="modal" data-bs-target="#Modal">
+                <span><img class="" src="assets/images/icons-mic/person-circle.svg"></span>
+                <span id="MyAccountDropdown" data-bs-toggle="dropdown" aria-expanded="false"></span>
+            </a>
+
+        </div>
+        <!-- Navbar Links -->
+        <div class="navbar navbar-expand-lg navbar-light booksNav d-none d-lg-flex">
+            <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light mobile-hide cat-links">
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">All Books</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Fiction</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Notification</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Kids</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li><span
+                    class="linkline">|</span>
+                <!-- <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li><span class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li><span class="linkline">|</span> -->
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Romance</a></li><span
+                    class="linkline">|</span>
+                <li class="nav-item hoverLinks"><a class="bs-nav-link nav-link linkText">Other</a></li><span
+                    class="linkline">|</span>
+            </ul>
+        </div>
+        <!-- Mobile SliderNav -->
+        <div id="mySidenav" class="sidenav">
+            <div class="sidebar-header">
+                <h4>Menu</h4>
+                <a href="javascript:;" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light booksNav">
+
+                <ul class="navbar-nav hoverLinks bs-navbar-nav nav-light ">
+                    <li class="nav-item dropdown mobile-account">
+                        <a class="bs-nav-link nav-link linkText" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-circle-user fs-6 personCircle me-2"></i>
+                            <span class="pe-2" id="MyAccountDropdown" data-co-toggle="dropdown" aria-expanded="false">
+                                My account</span>
+                        </a>
+
+                        <div class="dropdown-menu my_account_dropdown bs-menu container"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <div class="text-center btn_wrapper">
+                                <a type="button " class="btn btn-success sign_in_btn" data-co-toggle="modal"
+                                    data-co-target="#signInModal">Sign In</a>
+                                <a class="link" data-co-toggle="modal" data-co-target="#registerModal">Create an
+                                    account</a>
+                            </div>
+                            <div class="row">
+                                <ul class="list-unstyled pt-3">
+                                    <li>Manage Account</li>
+                                    <li>Order Status</li>
+                                    <li>My NOOK</li>
+                                    <li>Address Book</li>
+                                    <li>Payment Methods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">All</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Notification</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">E-Books & NOOK</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Teens & YA</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Kids</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Toy & Games</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Stationary Gifts</a></li>
+                    <li class="nav-item"><a class="bs-nav-link nav-link linkText">Music & Movies</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <section>
+        <img class="img-fluid banner1" src="assets/images/banner-slider/Ad_Banner.jpg" />
+    </section>
+
+    <section class="cartslide">
+        <div class="cart">
+            <div id="sidebar">
+                <div class="d-flex justify-content-between ms-4 mt-2 mb-2">
+                    <div class="d-flex align-items-center">
+                        <p class="presentation">Shopping Cart</p>
+                        <div class="cart-icon2">
+                            <i class=" bi bi-cart3 fs-2"></i>
+                            <span class="product-count">1</span>
+                        </div>
+                    </div>
+                    <div id="close_btn">
+                        <i class="bi bi-x p-2 fs-1" onclick="closeSidebar()"></i>
+                    </div>
+                </div>
+
+                <div class="free-shipping-rule">
+                    <p class="mb-0">
+                        <span class="text-uppercase">
+                            Add <span class="qualify-price">$21.01</span> of eligible items to qualify for FREE Shipping
+                            <a class="text-dark" href="#"><u><strong>See Details</strong></u></a></span>
+                    </p>
+                </div>
+
+                <div class="mini-cart-items-wrapper">
+                    <div class="mini-cart-items">
+                        <div>
+                            <img src="assets/images/books/book1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <ul class="description ms-3 list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-dark">The Thursday Murder Club: A
+                                        Novel</a>
+                                </li>
+                                <li>
+                                    <span class="contributors"><a class="text-decoration-none text-dark"
+                                            href="#">Richard Osman</a></span>
+                                </li>
+                                <li class="parent-format">Paperback</li>
+                                <li class="mt-2">
+                                    <span class="new-price fw-bold"> $13.99</span>
+                                    <s class="text-secondary"> $17.00</s>
+                                </li>
+                                <li class="d-flex justify-content-start align-items-center mt-3">
+                                    <span class="symbol me-2"><a href="#">-</a></span>
+                                    <div class="item-count me-2">1</div>
+                                    <span class="symbol"><a href="#">+</a></span>
+                                </li>
+                                <li class="d-flex mt-3 align-items-baseline">
+                                    <a class="save-leter" href="#">Save for Later</a>
+                                    <a class="remove ms-3" href="#">Remove</a>
+                                </li>
+                                <li class="mt-4">
+                                    <select class="form-select rounded-0 border-1" aria-label="Default select example">
+                                        <option selected>Ship This item</option>
+                                        <option value="1">Pick up in Store</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mx-5">
+                        <div class="form-check make_it_gift">
+                            <input class="form-check-input rounded-0 fs-4 me-2" type="checkbox" value=""
+                                id="flexCheckDefault" />
+                            <label class="form-check-label check-text" for="flexCheckDefault">Make it gift</label>
+                        </div>
+                    </div>
+
+                    <div class="add-coupon">
+                        <a href="#" class="text-decoration-none text-dark" onclick="myFunction()">Add Coupon Code <i
+                                class="bi bi-plus-circle fs-5"></i></a>
+                        <div id="myDIV" class="addCoupon-search">
+                            <input type="text" class="form-control" placeholder="Apply Coupon Code" />
+                            <button type="button" class="btn btn-primary">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Subtotal (1&nbsp;item)</div>
+                                <div class="price">$13.99</div>
+                            </div>
+                        </div>
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Estimated Shipping</div>
+                                <div class="price">$4.99</div>
+                            </div>
+                        </div>
+                        <div class="order-summary-table-row">
+                            <div class="d-flex justify-content-between">
+                                <div class="items">Estimated Tax</div>
+                                <div class="price">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-total-container">
+                    <div class="d-flex justify-content-between pt-4">
+                        <div class="text-uppercase o-total">Order Total</div>
+                        <div class="total-price">$18.98</div>
+                    </div>
+                    <button type="button" class="btn btn-primary checkout_btn">CONTINUE TO CHECKOUT</button>
+                    <div class="checkout-with">Or Checkout With</div>
+                    <div class="row my-3">
+                        <div class="col-6">
+                            <img src="./assets/paypal2.png" class="pay-image" alt="" />
+                        </div>
+                        <div class="col-6">
+                            <img src="./assets/credit.svg" class="pay-image" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="checkout_main">
+
+
+        <div class="container">
+            <div class="row my-5">
+
+
+
+                <!--  -->
+                <div class="left-section ">
+                    <div class="complete-info">
+                        You're just one click away from completing your order (great pick, by the way).
+                    </div>
+                    <div class="form-wrapper">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="main-label my-2">1. SHIPPING ADDRESS</div>
+                                <div class="row">
+                                    <!-- 1 -->
+                                    <div class="col-md-5  checkout-add-card">
+                                        <div class="form-check selection-row align-items-center">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1" />
+                                            <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                                Default Address
+                                            </label>
+
+
+                                        </div>
+                                        <p>Firstname Lastname</p>
+                                        <p>Address</p>
+                                        <p>address</p>
+                                        <p>Ahmedabad Gujarat - 380005</p>
+                                        <p>india</p>
+                                        <p>1234567890</p>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="col-md-5 checkout-add-card">
+                                        <div class="form-check selection-row align-items-center">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1" />
+                                            <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                                Address
+                                            </label>
+
+
+                                        </div>
+                                        <p>Firstname Lastname</p>
+                                        <p>Address</p>
+                                        <p>address</p>
+                                        <p>Ahmedabad Gujarat - 380005</p>
+                                        <p>india</p>
+                                        <p>1234567890</p>
+                                    </div>
+                                </div>
+                                <!-- /card end -->
+                                <span class="block-info">Please update your Shipping Information.</span>
+                            </div>
+
+                            <!-- colapse -->
+                            <div class="text-decoration-underline text-success" data-bs-toggle="collapse"
+                                href="#shipping">
+                                <strong>Edit</strong>
+                            </div>
+                        </div>
+                        <div class="form-content collapse" id="shipping">
+                            <form>
+                                <div class="selection-option">
+                                    <div class="form-check selection-row align-items-center">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" />
+                                        <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                            Choose/Edit a saved Shipping Address
+                                        </label>
+
+
+                                    </div>
+                                    <div class="form-check selection-row align-items-center mt-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" />
+                                        <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                            Add a new Shipping Address</label>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="firstname" type="text"
+                                                class="text-input form-control" />
+                                            <label>First Name*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 my-lg-0 my-3">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="lastname" type="text" class="text-input form-control" />
+                                            <label>Last Name*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="material-textfield form-floating">
+                                            <select class="select-box form-select">
+                                                <option value="US" role="option">United States</option>
+                                                <option value="CA" role="option">Canada</option>
+                                                <option value="AF" role="option">Afghanistan</option>
+                                                <option value="AL" role="option">Albania</option>
+                                                <option value="DZ" role="option">Algeria</option>
+                                                <option value="AS" role="option">American Samoa (U.S.)</option>
+                                                <option value="AO" role="option">Angola</option>
+                                                <option value="AI" role="option">Anguilla</option>
+                                                <option value="AG" role="option">Antigua and Barbuda</option>
+                                                <option value="AR" role="option">Argentina</option>
+                                                <option value="AM" role="option">Armenia</option>
+                                                <option value="AW" role="option">Aruba</option>
+                                                <option value="AU" role="option">Australia</option>
+                                                <option value="AZ" role="option">Azerbaijan</option>
+                                                <option value="AP" role="option">Azores</option>
+                                                <option value="BS" role="option">Bahamas</option>
+                                                <option value="BH" role="option">Bahrain</option>
+                                                <option value="BD" role="option">Bangladesh</option>
+                                                <option value="BB" role="option">Barbados</option>
+                                                <option value="BY" role="option">Belarus</option>
+                                                <option value="BJ" role="option">Benin</option>
+                                                <option value="BT" role="option">Bhutan</option>
+                                                <option value="BO" role="option">Bolivia</option>
+                                                <option value="BA" role="option">Bosnia And Herzegowina</option>
+                                            </select>
+                                            <label>country</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 my-lg-0 my-3">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="company name" type="text"
+                                                class="text-input form-control" />
+                                            <label>Company Name (optional)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="address" type="text" class="text-input form-control" />
+                                            <label>Street Address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="apt" type="text" class="text-input form-control" />
+                                            <label>Apt/Suite/Unit (optional)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="city" type="text" class="text-input form-control" />
+                                            <label>city*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 my-lg-0 my-3">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="state" type="text" class="text-input form-control" />
+                                            <label>state*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="city" type="text" pattern="^\d{5}(-\d{4})?$"
+                                                class="text-input form-control" />
+                                            <label>Zip Code*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 my-lg-0 my-3">
+                                        <div class="material-textfield form-floating">
+                                            <input placeholder="state" type="text"
+                                                pattern="^((1|\+1)?(\s|-|.)?)?((\(|\s\()?[2-9]{1}\d{2}|[2-9]{1}\d{2}(\)|\)\s)?)(\s|-|.)?(\d{3}(\s|-|.)?\d{4})"
+                                                class="text-input form-control" />
+                                            <label>Phone Number*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-check">
+                                        <input class="form-check-input rounded-0 me-2" type="checkbox" value=""
+                                            id="flexCheckDefault1" />
+                                        <label class="form-check-label check-text" for="flexCheckDefault1">
+                                            Save this address for future orders.
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input rounded-0 me-2" type="checkbox" value=""
+                                            id="flexCheckDefault" />
+                                        <label class="form-check-label check-text" for="flexCheckDefault">
+                                            Address can't be serviced by UPS (P.O. Box, APO or FPO)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="save-add-btn">Save & Continue</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="form-wrapper">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="main-label">2. SHIPPING OPTIONS</div>
+                            </div>
+                            <div class="text-decoration-underline text-success" data-bs-toggle="collapse"
+                                href="#shipping2">
+                                <strong>Edit</strong>
+                            </div>
+                        </div>
+                        <div class="form-content collapse" id="shipping2">
+                            <div class="ship-op-1">ITEMS TO BE SHIPPED FROM BARNES & NOBLE</div>
+                            <div class="ship-op-2">Estimated dates and cost based on your shipping address</div>
+                            <div class="ship-op-3">Choose Shipping Speed*</div>
+                            <div class="selection-option">
+                                <div class="form-check selection-row align-items-center">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" />
+                                    <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                        <strong class="">Standard Shipping</strong> : <span
+                                            class="text-secondary">Typically arrives in 3-5 business
+                                            days</span>&nbsp;....................................................................................................................&nbsp;<strong>$4.99</strong>
+                                    </label>
+                                </div>
+                                <div class="form-check selection-row align-items-center mt-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" />
+                                    <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                        <strong>Express Shipping</strong> : <span class="text-secondary">Typically
+                                            arrives in 2-3 business days</span>
+                                        &nbsp;.......................................................................................................................&nbsp;<strong>$7.99</strong></label>
+                                </div>
+                                <div class="form-check selection-row align-items-center mt-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" />
+                                    <label class="form-check-label ms-2" for="flexRadioDefault1">
+                                        <strong>Expedited Shipping</strong> : <span class="text-secondary">Typically
+                                            arrives in 1-2 business days</span>
+                                        ................................................................................................................&nbsp;<strong>$15.48</strong></strong></label>
+                                </div>
+                            </div>
+                            <div class="product mt-4">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="headingOne" style="padding: 1rem;">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Items in This Group (1 item)
+                                        </button>
+                                    </div>
+                                    <div id="collapseOne" style="padding: 1rem;"
+                                        class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            <div>Want to change something in this group? <span
+                                                    class="text-decoration-underline text-success">Edit Cart</span>
+                                            </div>
+                                            <div class="cart-item-details  px-2 my-2">
+                                                <img class="me-4" width="111px" src="assets/images/books/02.jpg" />
+                                                <!--  -->
+                                                <div class="me-4">
+                                                    <div class="">The Thursday Murder Club: A Novel</div>
+                                                    <div class="">by Richard Osman</div>
+                                                    <div class="">Paperback</div>
+                                                    <div class="">Estimated Arrival Date: <span>Tuesday, October
+                                                            19</span></div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input rounded-0 me-2" type="checkbox"
+                                                            value="" id="flexCheckDefault1" />
+                                                        <label class="form-check-label check-text"
+                                                            for="flexCheckDefault1">
+                                                            Make it a gift
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex my-3">
+                                                    <div class="price-section me-4">$13.99</div>
+                                                    <div class="me-4">Qty: 1</div>
+                                                    <div class=""><strong>$13.99</strong></div>
+                                                </div>
+                                                <!--  -->
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- review -->
+
+                    <div class="form-wrapper">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class="main-label">3.Review Order</div>
+                            </div>
+
+                        </div>
+                        <div class="form-content ">
+
+
+                            <div class="product mt-4">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="headingtwo" style="padding: 1rem;">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsetwo" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Items in This Group (1 item)
+                                        </button>
+                                    </div>
+                                    <div id="collapsetwo" style="padding: 1rem;" class="accordion-collapse collapse "
+                                        aria-labelledby="headingtwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div>Want to change something in this group? <span
+                                                    class="text-decoration-underline text-success">Edit Cart</span>
+                                            </div>
+                                            <div class="cart-item-details px-2 my-2">
+                                                <img class="me-4" width="111px" src="assets/images/books/04.jpg" />
+                                                <div class="me-4">
+                                                    <div class="">The Thursday Murder Club: A Novel</div>
+                                                    <div class="">by Richard Osman</div>
+                                                    <div class="">Paperback</div>
+                                                    <div class="">Estimated Arrival Date: <span>Tuesday, October
+                                                            19</span></div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input rounded-0 me-2" type="checkbox"
+                                                            value="" id="flexCheckDefault1" />
+                                                        <label class="form-check-label check-text"
+                                                            for="flexCheckDefault1">
+                                                            Make it a gift
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex my-3">
+                                                    <div class="price-section me-4">$13.99</div>
+                                                    <div class="me-4">Qty: 1</div>
+                                                    <div class=""><strong>$13.99</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--  -->
+                </div>
+                <!--  -->
+                <!--  -->
+                <div class="right-section">
+                    <div class="order-summary-wrapper">
+                        <h3>Order Summary</h3>
+                        <div class="d-flex justify-content-between order-detail mt-2">
+                            <div>Subtotal (1 Item)</div>
+                            <div>$13.99</div>
+                        </div>
+                        <div class="d-flex justify-content-between order-detail">
+                            <div>Shipping</div>
+                            <div>$15.48</div>
+                        </div>
+                        <div class="d-flex justify-content-between order-detail">
+                            <div>Estimated Tax</div>
+                            <div>$00.00</div>
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between o-total">
+                            <div>Order Total</div>
+                            <div>$29.47</div>
+                        </div>
+                        <button class="submit-btn">Submit Order</button>
+                    </div>
+                </div>
+                <!--  -->
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer start -->
+    <section class="ft-normal mb-3 mx-4 mt-4 ">
+
+        <div class="container mx-auto">
+            <!-- footer block -->
+            <div class="row border-top footer-box">
+
+                <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa fa-truck" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">Free Delivery Across India <br> Available With Every Order</p>
+                    <!-- <p class="f-head2 mb-2">5% Back on All ChapterOne&nbsp;Purchases</p> -->
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+                <div class="border-end border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa-book" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">Over 1 Lakh Books <br> Available Online</p>
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+                <div class=" border-bottom col-12 col-lg-4  pt-4 px-4">
+                    <h5><a href=""><i class="fa fa-star" aria-hidden="true"></i></a></h5>
+                    <p class="f-head1 mb-1">100% Safe And <br> Secure Payments</p>
+                    <p class="ft-promo-link">
+                        <a href="#" target="_blank"> Learn More ></a>
+                    </p>
+                </div>
+            </div>
+
+            <!--footer block end  -->
+            <div class="my-4 my-md-5 row">
+                <div class="col">
+                    <div class="row footer-list">
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">ChapterOne Services</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="refund-and-return-policy.html">Refund and
+                                        Return
+                                        Policies</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Privacy Policy</a></li>
+                                <li class="ft-promo-link"><a class="" href="term-of-use.html">Terms Of use</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">About Us</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="about-us.html">About ChapterOne</a></li>
+                            </ul>
+                        </div>
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">Quick Help</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="#">Help Center</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col footer-wrap">
+                            <p class="mb-1 f-head">Shop by Category</p>
+                            <ul class="list-unstyled">
+                                <li class="ft-promo-link"><a class="" href="#">Fall's Biggest Books</a></li>
+                                <li class="ft-promo-link"><a class="" href="#" target="_blank">Fiction</a></li>
+                                <li class="ft-promo-link"><a class="" href="#" target="_blank">Nonfiction</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Kids</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Teens & YA</a></li>
+                                <li class="ft-promo-link"><a class="" href="#">Greeting Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ps-lg-5">
+                    <div class="row fsocial">
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/fb.svg" /></a>
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/twitter.svg" /></a>
+                        <a class="social-icon"><img class="img-fluid" src="assets/images/icons-mic/insta.svg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ft-legel my-3 border-top container mx-auto">
+            <div class="d-flex flex-wrap flex-row justify-content-between">
+                <ul class="list-inline footerList-nav">
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Terms of Use</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Copyright &amp; Trademark</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#" target="_blank">Privacy</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#" target="_blank">Do Not Sell My Personal Information</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Accessibility</a>
+                    </li>
+                    <li class="list-inline-item p-2">
+                        <a class="link" href="#">Cookie Policy</a>
+                    </li>
+                    <li class="list-inline-item p-2"><a class="link" href="#">Sitemap</a></li>
+                </ul>
+
+
+            </div>
+        </footer>
+    </section>
+    <!-- footer end -->
+    <!-- pop up -->
+
+    <!-- modal -->
+
+
+    <!-- /pop and -->
+
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
+</body>
+
+</html>

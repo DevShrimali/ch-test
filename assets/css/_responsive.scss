@@ -1,0 +1,203 @@
+//  Responsive ============================================================================= //
+@media (max-width: 767px) {
+    .subHeader {
+        padding: 0;
+    }
+
+    .navbar {
+        display: block;
+    }
+  
+    .bookPromo-inner .row1 {
+        flex-wrap: nowrap;
+        display: flex;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .btn-sidebar {
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        top: -8px;
+    }
+
+    .cart-icon2 {
+        // width: 15px;
+        margin: auto;
+        position: absolute;
+        right: -45%;
+
+        #hover_btn {
+            width: 20px;
+        }
+    }
+
+    .bs-logo-bar {
+
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .bs-logo-bar>.logo_main {
+        position: absolute;
+        left: 50%;
+        top: 5px;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .bs-logo-bar .search-input {
+        order: 5;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 1.5rem !important;
+    }
+
+    .bs-logo-bar .wishlistArea {
+        margin-left: auto;
+    }
+
+    .wishlistArea {
+        margin-right: 0;
+    }
+
+    .wishlistArea span {
+        display: none;
+    }
+
+    .rhf-desktop-hide {
+        display: block;
+    }
+
+    .pre-navCarousel>button {
+        visibility: hidden;
+    }
+
+    .carousel-item {
+        font-size: 12px !important;
+    }
+
+    .account-options {
+        display: none !important;
+    }
+
+    .ad-banner {
+        margin-top: 0;
+        height: auto;
+    }
+
+
+    .slick-icon {
+        margin-bottom: 0 !important;
+    }
+
+    .slick-icon p {
+        font-size: 13px;
+    }
+
+    .slick-icon {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 20px) !important;
+        max-width: 0 auto;
+        margin: 0 !important;
+        margin-bottom: 20px;
+
+        img {
+            padding: 15px;
+            object-fit: cover;
+            width: auto;
+            max-height: 100px;
+            border-radius: 15px;
+        }
+    }
+
+    .personCircle {
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    // Author 
+
+    .author img {
+        border-radius: 100%;
+        width: 100px !important;
+        height: 100px !important;
+        object-fit: cover;
+    }
+}
+
+// Mobile Nav 
+
+
+.sidenav {
+    background-color: #fff;
+    height: 100%;
+    width: 0;
+    overflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    // transition: 0.5s;
+}
+
+.sidebar-header {
+    background: var(--white);
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid --gray;
+}
+
+.sidebar-header h4 {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 0;
+}
+
+.mobile-account {
+    background: var(--primary);
+    padding-top: 5px !important;
+
+    span {
+        color: #fff !important;
+    }
+}
+
+.sidenav .sidebar-header .closebtn {
+    font-size: 34px;
+    color: var(--primary);
+    padding: 0 5px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    line-height: 38px;
+}
+
+.sidenav .bs-navbar-nav>.nav-item {
+    border-right: none
+}
+
+.sidenav .bs-navbar-nav>.nav-item {
+    border-bottom: #e5e5e5 1px solid;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.sidenav .linkText {
+    margin-right: 18px;
+    margin-left: 18px;
+}
+
+.sidenav .bs-menu {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 10px;
+}

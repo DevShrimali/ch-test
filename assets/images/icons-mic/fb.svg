@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+						<use class="social-icons__icon" xlink:href="#facebook">
+							<path id="facebook" d="M13.6 10.6V13h-1.9v3h1.9v9h3.6v-9h2.5l.3-3h-2.8v-1.7c0-.7.1-1 .8-1h1.9V7.1h-2.5c-2.6 0-3.8 1.2-3.8 3.5z"></path>
+						</use>
+					</svg>
