@@ -35,10 +35,10 @@ $(document).ready(function () {
     $("#sidebar").css("width", "365px")
     document.getElementById("wrapper").style.visibility = "visible"
   });
-    // setTimeout(() => {
-    //   $("#download-popup").modal('show');
-    // }, 
-    // 1000);
+    setTimeout(() => {
+      $("#download-popup").modal('show');
+    }, 
+    1000);
 
     //   Main Banner
     $('.slider-fade').slick({
