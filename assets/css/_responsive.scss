@@ -1,5 +1,36 @@
 //  Responsive ============================================================================= //
 @media (max-width: 767px) {
+    // .all-books{
+
+    //     h2,p,button,a {
+    //         font-size: 12px !important;
+    //     }
+    //     h3{
+    //         font-size: 14px ;
+    //     }
+    // }
+    .img_container {
+        margin: 1rem 20px 20px 0 !important;
+        min-width: 140px;
+        object-fit: cover;
+    }
+
+    .btn-primary {
+        font-size: 12px;
+    }
+
+    .product-title {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .format {
+        font-size: 10px;
+    }
+
     .subHeader {
         padding: 0;
     }
@@ -138,6 +169,11 @@
         margin: 1rem 0.5rem;
     }
 
+    .tabset {
+        width: 100%;
+    }
+
+
 }
 
 @media (max-width: 991px) {
@@ -255,6 +291,139 @@
         height: 100px !important;
         object-fit: cover;
     }
+
+
+    // Product- detail Page 
+
+
+
+    .Product_detail .Product-container {
+        margin: 0px;
+    }
+
+    .Product_detail .product-thumb {
+        width: 24%;
+        margin: 0;
+        height: auto;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .Product_detail .heart-icon {
+        margin: 0px;
+    }
+
+    .Product_detail .pdp-header-title {
+        font-size: 20px;
+    }
+
+    .Product_detail .radio-btn {
+        margin: 10px auto;
+    }
+
+    .Product_detail .cart-btn {
+        margin: 0px !important;
+    }
+
+    .Product_detail .overview-container {
+        margin: 10px 15px;
+    }
+
+    .Product_detail .pdp-tab-container {
+        margin: 10px 0px;
+    }
+
+    .Product_detail .tabset {
+        width: 100%;
+    }
+
+    .tabset>input:checked+label {
+        margin: 0px;
+    }
+
+    .Product_detail .tabset>label {
+        padding: 2.4%;
+        margin: 0px;
+    }
+
+    .Product_detail .EditorialReviews {
+        margin: 20px auto;
+        padding: 15px 0px 30px;
+    }
+
+    .Product_detail .reviews {
+        margin: 20px 15px;
+    }
+
+    .Product_detail .search_container {
+        padding: 0px;
+    }
+
+    .Product_detail .search_container input {
+        width: 75%;
+    }
+
+    .Product_detail .search_container button {
+        width: 23%;
+        padding: 0px;
+    }
+
+    .Product_detail .bv-content-title,
+    .Product_detail .w-50 {
+        width: 100% !important;
+        margin-bottom: 5%;
+    }
+
+    .Product_detail .bv-section-summary {
+        flex-wrap: wrap;
+    }
+
+    .Product_detail .reviews h6 {
+        font-size: 1rem;
+    }
+
+    .Product_detail .recentlyViewed {
+        margin: 20px auto;
+    }
+
+    .Product_detail .recentlyViewed_container {
+        width: 100%;
+    }
+
+    .Product_detail .recentlyViewed_container img {
+        width: 50%;
+    }
+
+    .Product_detail #aboutAuthor,
+    .Product_detail #readExpert {
+        padding: 20px 15px;
+    }
+
+    .Product_detail .link {
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        color: #3848a2;
+        text-decoration: none;
+        padding: 0;
+        line-height: 1;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .pdp-tab-container {
+        margin: 50px 10px 0 !important;
+    }
+
+
+    // Product  List 
+
+    .content-wrapper {
+        border: none;
+        padding: 0 5px 0 5px;
+    }
+
 }
 
 // Mobile Nav 

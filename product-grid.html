@@ -249,12 +249,11 @@
     <!--  ==============================================================================================  -->
 
 
-    <!-- Product List =====================================================================================  -->
+    <!-- Product Grid =====================================================================================  -->
 
 
-    <section class="all-books-grid">
+    <section class="all-books">
         <div class="container">
-
             <nav class="breadcrumb" style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active">Home</li>
@@ -264,9 +263,7 @@
             </nav>
             <h3 class="cat-main-head my-5 yack">Product Grid</h3>
             <div class="row">
-
-                <div class="col-lg-2  col-md-4 col-sm-12 col-12 mobile-hide">
-
+                <div class="col-lg-2 col-md-4 col-sm-12 col-12 mobile-hide">
                     <div class="accordion-menu">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -274,388 +271,404 @@
                                 Categories
                             </button>
                         </h2>
+                    </div>
+                    <div>
                         <div>
-                            <div>
-                                <ul class="list-unstyled mt-3 menuLinks collapse show" id="collapseOne">
-                                    <li>Best Seller</li>
-                                    <li>Fictional</li>
-                                    <li>Kids</li>
-                                    <li>Novel</li>
-                                    <li>Triller</li>
-                                    <li>Top author</li>
-                                    <li>Top Books</li>
-                                    <li>Young Choice</li>
-                                    <li>Awared</li>
-                                </ul>
-                            </div>
+                            <ul class="list-unstyled mt-3 menuLinks collapse show" id="collapseOne">
+                                <li>Best Seller</li>
+                                <li>Fictional</li>
+                                <li>Kids</li>
+                                <li>Novel</li>
+                                <li>Triller</li>
+                                <li>Top author</li>
+                                <li>Top Books</li>
+                                <li>Young Choice</li>
+                                <li>Awared</li>
+                            </ul>
                         </div>
                     </div>
-
-
-
                 </div>
-
                 <div class="col-lg-10 col-md-8 col-sm-12 col-12">
                     <div class="content-wrapper">
-                        <!--  -->
-
                         <div class="row">
-                            <div class="col-lg-12 my-3">
-                                <p>1- 20 of 480 results</p>
-                                <div class="justify-content-end d-lg-flex d-block my-2">
+                            <p style="font-size: 12px;">1- 20 of 480 results</p>
+                            <div class="col-lg-12 my-3 d-flex align-items-center justify-content-between try">
 
-                                    <div class="material-textfield form-floating mx-2">
-                                        <select name="seller" id="seller" class=" ms-2  my-2 "
-                                            style="padding:1rem 4rem;">
-                                            <option value="" hidden>Best Sellers</option>
-                                            <option value="a">Best Sellers</option>
-                                            <option value="b">New Arrivel</option>
-                                            <option value="c">buy 1 get 1</option>
-                                            <option value="c">Best Sellers</option>
-                                            <option value="c">Best Sellers</option>
-                                            <option value="c">Best Sellers</option>
-                                            <option value="c">Best Sellers</option>
-                                        </select>
-                                        <label class="mt-2">sort by:</label>
-                                    </div>
-                                    <!--  -->
-                                    <div class="material-textfield form-floating mx-2">
-                                        <select name="total" id="totalno" class="ms-2 my-2" style="padding:1rem 4rem;">
-                                            <option value="" hidden>20</option>
+                                <div class="d-flex">
+
+                                    <div class="form-floating ">
+                                        <select name="total" id="totalno" class=" form-select rounded-0"
+                                            style="padding:1rem 1.7rem 1rem 10px;">
+                                            <option value="" hidden>Show: 20</option>
                                             <option value="a">20</option>
                                             <option value="b">40</option>
 
                                         </select>
-                                        <label class="mt-2">show:</label>
+
+                                    </div>
+                                    <div class="form-floating mx-2">
+                                        <select name="seller" id="seller" class="  form-select rounded-0 "
+                                            style="padding:1rem 1.7rem 1rem 10px;">
+                                            <option value="" hidden>Sort by : Best Sellers</option>
+                                            <option value="a">Best Sellers</option>
+                                            <option value="a">Price Low to High</option>
+                                            <option value="a">Price High to Low</option>
+
+                                        </select>
+
                                     </div>
                                     <!--  -->
-                                    <div class=" pull-right my-2">
-                                        <a href="product-list.html" style="text-decoration: none;color:#333">
-                                            <i class="fa fa-list" aria-hidden="true"></i> List View
-                                        </a>
-                                        <a href="product-grid.html" style="text-decoration: none;color:#333">
-                                            <i class="fa fa-th" aria-hidden="true"></i>
-                                            Grid View
-                                        </a>
-                                    </div>
 
+                                    <!--  -->
+                                </div>
+                                <div class="d-flex d-block">
+
+                                    <a href="product-grid.html" class="grid-v rounded-0">
+                                        <img src="assets/images/icons-mic/grid.png" height="30px" alt=""><br>Grid</a>
+
+                                    <a href="product-list.html" class="list-v rounded-0">
+                                        <img src="assets/images/icons-mic/list.png" height="30px" alt="">
+                                        <br>List</a>
                                 </div>
 
                             </div>
                         </div>
 
-                        <!--  -->
-                        <!-- 1 -->
-                        <div class=" border-bottom row">
-                            <div class="col-lg-4 col-xl-3  col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
-                                    </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <img class="wishlist-img" src="assets/images/books/01.jpg" alt="...">
 
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                        <div class="mobile-product-card-">
+                            <!-- Product Card -->
+                            <div class="row bb-05 pb-5">
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/02.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
                                     </div>
-
-                                </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!-- 2 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6 item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
-                                    </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <img class="wishlist-img" src="assets/images/books/02.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-
-
-                            <!-- 2 end -->
-                            <!-- 3 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/03.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-
-                            </div>
-                            <!--3 end  -->
-                            <!-- 4 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6 item">
-                                <div class="thumbnail  all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/04.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
                                     </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
-                                    </div>
-                                </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--4 end  -->
-                            <!-- 5 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
-                                    </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--5 end  -->
-                            <!-- 6 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6  col-6 item">
-                                <div class="thumbnail all-books-img">
-
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--6 end  -->
-                            <!-- 7 -->
 
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6 item">
-                                <div class="thumbnail  all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/6.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
                                     </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
-                                    </div>
-                                </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--7 end  -->
-                            <!-- 8 -->
-
-                            <div class="col-lg-4 col-xl-3  col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
-                                    </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--8 end  -->
-                            <!-- 9 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6 item">
-                                <div class="thumbnail   all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
+<!-- 7 -->
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/7.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
                                     </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
-                                    </div>
-                                </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--9 end  -->
-                            <!-- 10 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
-                                    </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel <br>
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--10 end  -->
-                            <!-- 11 -->
 
-                            <div class="col-lg-4 col-xl-3  col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
                                     </div>
-                                    <div class="triangle-l"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
-                                    </div>
-                                </div>
-                                <span>
-                                    At the Wolf's Table: A Novel by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
-                            </div>
-                            <!--11 end  -->
-                            <!-- 12 -->
-
-                            <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-6  item">
-                                <div class="thumbnail all-books-img">
-                                    <div class="rectangle" style="background: red;">
-                                        <h2>Buy 1, Get 1 50% Off
-                                        </h2>
-                                    </div>
-                                    <div class="triangle-l"
-                                        style="border-color: transparent red transparent transparent;"></div>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                                    <img class="wishlist-img" src="assets/images/books/03.jpg" alt="...">
-                                    <div class="overlay">
-                                        <button class="order_now_btn">Quick Add</button>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <span>
-                                    At the Wolf's Table: A Novel
-                                    by <a href="#">Rosella Postorino</a>
-                                    <p><a href="">Paperback $9.99
-                                        </a></p>
-                                </span>
+
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-card-i col-6 col-xl-3 col-lg-4">
+                                    <div class="img_container ">
+                                        <div class="rectangle blue">
+                                            <h2>out of stock
+                                            </h2>
+                                        </div>
+                                        <div class="triangle-l"></div>
+                                        <img src="assets/images/books/5.jpg" class="kids_book_img img-fluid" />
+                                        <div class="overlay">
+                                            <button class="order_now_btn">Quick Add</button>
+                                        </div>
+                                    </div>
+                                    <div class=" me-3 ">
+                                        <h6 class="mt-2"><span class="author-dec"> Amy Winehouse:Beyond Black</span>
+                                        </h6>
+                                        <p class="auth-name"><u>Naomi parry</u></p>
+                                        <div class="rating">
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                            <img src="assets/images/icons-mic/whitestar.svg" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!--12 end  -->
                         </div>
-
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-end my-3">
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
                     </div>
                 </div>
-                <!--  left side end  -->
-                <!-- pagination start -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end my-3">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- pagination end -->
             </div>
-
-
-            <!-- row end -->
-        </div>
     </section>
 
     <!-- Footer ============================================================================================= -->
