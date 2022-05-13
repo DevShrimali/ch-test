@@ -38,7 +38,7 @@ $(document).ready(function () {
     setTimeout(() => {
       $("#download-popup").modal('show');
     }, 
-    1000);
+    3000);
 
     //   Main Banner
     $('.slider-fade').slick({
