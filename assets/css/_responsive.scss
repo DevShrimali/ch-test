@@ -1,5 +1,8 @@
 //  Responsive ============================================================================= //
 @media (max-width: 767px) {
+
+
+
     // .all-books{
 
     //     h2,p,button,a {
@@ -9,15 +12,19 @@
     //         font-size: 14px ;
     //     }
     // }
-    .list-v, .grid-v {
-        padding:0;
+    .list-v,
+    .grid-v {
+        padding: 0;
+
         img {
             padding: 5px;
         }
-      }
+    }
+
     .try {
         width: 100%;
     }
+
     .img_container {
         margin: 1rem 20px 20px 0 !important;
         min-width: 140px;
@@ -186,6 +193,25 @@
 }
 
 @media (max-width: 991px) {
+
+    // Download popup
+    .title-pp {
+        // position: relative;
+        // top: 10px;
+        padding: 1rem;
+        position: relative;
+        left: 0 !important;
+    }
+
+    .download-body {
+        // padding: 0;
+        position: relative;
+        bottom: 1rem !important;
+        left: 0 !important;
+        padding-right: 0rem;
+
+    }
+
     .btn-sidebar {
         font-size: 28px;
         cursor: pointer;
