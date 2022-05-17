@@ -849,7 +849,7 @@ accordion-button {
 .mini-cart-items-wrapper {
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(100% - 350px) !important;
+  max-height: calc(100% - 280px) !important;
 }
 
 .make_it_gift {
@@ -1449,6 +1449,7 @@ footer .input-group button.btn-outline-secondary {
 .modal-content {
   background-color: var(--primary);
   color: var(--white);
+  // padding: -5rem;
 }
 
 #download-popup .btn-close {
